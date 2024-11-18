@@ -1,0 +1,48 @@
+header {
+    background-color: #FFF;
+    padding: 15px 0;
+
+    .customToolbar {
+        background: none;
+
+        .mainlogo {
+            margin-right: 80px;
+        }
+
+        .menu {
+            a {
+                margin-right: 30px;
+                font-size: 14px;
+                position: relative;
+                cursor: pointer;
+                font-weight: 500;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background: #FF5000;
+                    position: absolute;
+                    bottom: -15px;
+                    left: 0;
+                    transition: all 0.5s;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    &:after {
+                        bottom: -10px;
+                        opacity: 1;
+                    }
+                }
+
+                &.active {
+                    &:after {
+                        bottom: -10px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
