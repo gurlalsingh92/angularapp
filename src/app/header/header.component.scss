@@ -1,12 +1,43 @@
 header {
     background-color: #FFF;
-    padding: 15px 0;
+    padding: 5px 0;
+
+    @media (min-width:992px) {
+        padding: 15px 0;
+    }
 
     .customToolbar {
         background: none;
+        justify-content: space-between;
+
+        .mobile-menu {
+            background: none;
+            border: 0;
+            cursor: pointer;
+
+            mat-icon {
+                font-size: 30px;
+                width: auto;
+                height: auto;
+            }
+
+            @media (min-width:768px) {
+                display: none;
+            }
+        }
 
         .mainlogo {
             margin-right: 80px;
+
+            img {
+                max-width: 130px;
+                line-height: 1;
+                display: block;
+
+                @media (min-width:768px) {
+                    max-width: 100%;
+                }
+            }
         }
 
         .menu {

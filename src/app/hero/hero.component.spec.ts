@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HeroComponent } from './hero.component';
 
 describe('HeroComponent', () => {
@@ -10,7 +9,7 @@ describe('HeroComponent', () => {
     await TestBed.configureTestingModule({
       imports: [HeroComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HeroComponent);
     component = fixture.componentInstance;

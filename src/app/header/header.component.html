@@ -1,16 +1,20 @@
 <header role="header">
     <mat-toolbar class="container customToolbar">
-
         <div class="mainlogo">
             <!-- Logo Section -->
             <img src="assets/DCG_Logo.svg" alt="Logo" class="header-logo" />
         </div>
-        <!-- Navigation Menu -->
-        <div class="menu">
-            <a class="active" mat-button routerLink="/home">What we do</a>
-            <a mat-button routerLink="/about">Who are we</a>
-            <a mat-button routerLink="/services">Careers</a>
-            <a mat-button routerLink="/contact">Contact Us</a>
-        </div>
+        <!-- Hamburger icon for mobile -->
+        <button mat-icon-button (click)="toggleMenu()" class="mobile-menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <!-- Mobile Menu -->
+        <mat-menu #menu="matMenu" class="navbar-menu menu">
+            <button mat-menu-item routerLink="/home">What we do</button>
+            <button mat-menu-item routerLink="/about">Who are we</button>
+            <button mat-menu-item routerLink="/services">Careers</button>
+            <button mat-menu-item routerLink="/contact">Contact Us</button>
+        </mat-menu>
+
     </mat-toolbar>
 </header>
