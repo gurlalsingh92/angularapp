@@ -1,0 +1,107 @@
+@import url(../../styles.scss);
+
+/* Flex Basic */
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Text Data White */
+@mixin textWhite {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+
+    margin-bottom: 15px;
+    color: #FFF;
+
+    @media (min-width:1366px) {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+/* Footer Data */
+.main-footer {
+    background: #242424;
+    padding: 30px 0;
+
+    /* Footer Logo */
+    .topLogo {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #FF5000;
+    }
+
+    /* Footer Data Under Ornage Border */
+    .footerContent {
+        padding-top: 35px;
+        @include flex;
+        border-bottom: 1px solid #FF5000;
+        padding-bottom: 35px;
+
+        /* Text Orange */
+        .contentFooter {
+            max-width: 300px;
+
+            @media (min-width:1366px) {
+                max-width: 395px;
+            }
+
+            h3 {
+                font-size: 25px;
+                color: #FF5000;
+                font-weight: 500;
+                font-family: "Montserrat", sans-serif;
+                line-height: 32px;
+
+                @media (min-width:1366px) {
+                    font-size: 32px;
+                    line-height: 38px;
+                }
+            }
+        }
+
+        /* Menus Area After Orange Title */
+        .MenuArea {
+            max-width: calc(100% - 300px);
+            width: 100%;
+            @include flex;
+            padding-left: 115px;
+            padding-right: 25px;
+
+            @media (min-width:1366px) {
+                max-width: calc(100% - 395px);
+            }
+
+            /* Footer Menus */
+            .menuData {
+                @include flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 5px;
+
+                a {
+                    text-decoration: none;
+                    @include textWhite;
+
+                    &:hover {
+                        color: #FF5000;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /* Copyright */
+    .copyright {
+        padding: 30px 0 0;
+
+        p {
+            @include textWhite;
+            margin: 0;
+        }
+    }
+}

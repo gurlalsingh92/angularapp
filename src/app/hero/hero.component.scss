@@ -88,46 +88,7 @@
 
 
 
-        button {
-            background: none;
-            border: 2px solid rgba(208, 208, 208, 0.68);
-            border-radius: 8px;
-            padding: 10px 15px 12px;
-            font-size: 14px;
-            color: #FF5000;
-            line-height: 1;
-            cursor: pointer;
-            font-family: "Inter", sans-serif;
-            margin: 0 auto;
 
-            img {
-                margin-left: 10px;
-                line-height: 1;
-                display: inline-block;
-                margin-bottom: -2px;
-                max-width: 25px;
-
-                @media (min-width:992px) {
-                    max-width: 100%;
-                }
-            }
-
-            &:hover {
-                background: #FF5000;
-                color: #FFF;
-                border-color: #FF5000;
-
-                img {
-                    filter: brightness(0) invert(1);
-
-                }
-            }
-
-            @media only screen and (min-width:992px) {
-                padding: 10px 15px 12px;
-                font-size: 20px;
-            }
-        }
     }
 
     .barBottom {
@@ -135,6 +96,43 @@
         bottom: 0;
         background: rgba(255, 255, 255, 0.6);
         width: 100%;
+        border-top: 1px solid #ADADAD;
+
+        .menuTab {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 34px 0 10px;
+
+            a {
+                font-size: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                cursor: pointer;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: -18px;
+                    height: 7px;
+                    background-color: #FF5000;
+                    width: 100%;
+                    opacity: 0;
+                    transform: translateY(5px);
+                    transition: all 0.5s;
+                }
+
+                &:hover,
+                &.active {
+                    &:before {
+                        opacity: 1;
+                        transform: translateY(0px);
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
     }
 
 }

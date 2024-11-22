@@ -1,0 +1,74 @@
+.serviceMain {
+    padding: 160px 0;
+
+    .serviceRow {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #000;
+            padding-bottom: 80px;
+            margin-bottom: 80px;
+        }
+
+        .cardMatData {
+            flex: 0 0 1;
+            width: calc(100%/4);
+            min-height: 235px;
+            background: none;
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            display: inline-flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 0 35px;
+
+            &:not(:last-child) {
+                border-right: 1px solid #FF5000;
+            }
+
+            * {
+                font-family: "Montserrat", sans-serif;
+            }
+
+            .mat-mdc-card-content {
+                padding: 0;
+
+                h2 {
+                    font-size: 48px;
+                    font-weight: 600;
+                    color: #FF5000;
+                    line-height: 1;
+                    margin: 0 0 20px;
+                }
+
+                p {
+                    font-size: 20px;
+                    color: #000;
+                }
+            }
+
+            mat-card-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .btn {
+                    background: none;
+                    border: 0px;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                }
+            }
+
+            &:hover {
+                .btn {
+                    transform: translateX(10px);
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+}
