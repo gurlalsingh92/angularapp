@@ -1,8 +1,20 @@
 .workingDCG {
     background: url(../../assets/dcg-working.jpg) center center no-repeat;
-    padding: 90px 0;
+    padding: 45px 0;
     background-size: cover;
     position: relative;
+
+    @media (min-width:768px) {
+        padding: 50px 0;
+    }
+
+    @media (min-width:992px) {
+        padding: 70px 0;
+    }
+
+    @media (min-width:1200px) {
+        padding: 120px 0;
+    }
 
     &:before {
         width: 100%;
@@ -22,11 +34,30 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-direction: column;
+
+            @media (min-width:768px) {}
+
+            @media (min-width:992px) {
+                justify-content: space-between;
+                flex-direction: row;
+            }
+
+            @media (min-width:1200px) {}
 
             .imageDCG {
-                padding: 0px 40px 0 0;
+                padding: 0px 00px 25px 0;
                 margin: 0px;
-                flex: 0 0 50%;
+                flex: 0 0 100%;
+                width: 100%;
+
+                @media (min-width:768px) {}
+
+                @media (min-width:992px) {
+                    padding: 0px 40px 0 0;
+                    flex: 0 0 50%;
+
+                }
 
                 img {
                     width: 100%;
@@ -34,25 +65,40 @@
             }
 
             h2 {
-                font-size: 64px;
+                font-size: 45px;
+                line-height: 55px;
                 font-weight: bold;
-                line-height: 72px;
+
                 font-weight: bold;
                 font-family: "Montserrat", sans-serif;
-                margin: 0 0 30px;
+                margin: 0 0 0px;
                 position: relative;
                 width: auto;
                 display: inline-block;
 
+                @media (min-width:768px) {}
+
+                @media (min-width:992px) {}
+
+                @media (min-width:1200px) {
+                    font-size: 64px;
+                    line-height: 72px;
+                    margin: 0 0 30px;
+                }
+
                 &:after {
                     background: #000000;
-                    width: 100%;
+                    width: 120px;
                     height: 1px;
                     content: "";
                     display: inline-block;
                     position: absolute;
                     bottom: 12px;
                     margin-left: 15px;
+
+                    @media (min-width:992px) {
+                        width: 100%;
+                    }
                 }
 
                 span {

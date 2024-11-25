@@ -2,6 +2,7 @@
     background: url(../../assets/hero01.jpg) center center no-repeat;
     height: 300px;
     position: relative;
+    padding-bottom: 70px;
 
     @media (min-width:992px) {
         height: 400px;
@@ -102,25 +103,51 @@
             width: 100%;
             display: flex;
             justify-content: space-around;
-            padding: 34px 0 10px;
+            padding: 24px 0 10px;
+
+            @media (min-width:992px) {
+                padding: 34px 0 10px;
+            }
 
             a {
-                font-size: 20px;
+                font-size: 12px;
                 font-family: "Montserrat", sans-serif;
-                font-weight: 600;
+                font-weight: 400;
                 cursor: pointer;
                 position: relative;
+                margin: 0 5px;
+
+                @media (min-width:768px) {
+                    font-size: 15px;
+                    margin: 0;
+                }
+
+                @media (min-width:992px) {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
 
                 &:before {
                     content: "";
                     position: absolute;
-                    top: -18px;
-                    height: 7px;
+                    top: -10px;
+                    height: 3px;
                     background-color: #FF5000;
                     width: 100%;
                     opacity: 0;
                     transform: translateY(5px);
                     transition: all 0.5s;
+                    left: 0;
+
+                    @media (min-width:768px) {
+                        top: -14px;
+
+                    }
+
+                    @media (min-width:992px) {
+                        top: -18px;
+                        height: 7px;
+                    }
                 }
 
                 &:hover,

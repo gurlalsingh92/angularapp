@@ -1,19 +1,26 @@
 <header role="header">
-    <mat-toolbar class="container customToolbar">
+    <mat-toolbar class="container customToolbar app-toolbar">
         <div class="mainlogo">
             <!-- Logo Section -->
             <img src="assets/DCG_Logo.svg" alt="Logo" class="header-logo" />
         </div>
         <!-- Hamburger icon for mobile -->
-        <button mat-icon-button (click)="toggleMenu()" class="mobile-menu">
+        <div class="desktop-menu">
+            <a class="active" mat-button routerLink="/home">What we do</a>
+            <a mat-button routerLink="/about">Who are we</a>
+            <a mat-button routerLink="/services">Careers</a>
+            <a mat-button routerLink="/contact">Contact Us</a>
+        </div>
+
+        <button *ngIf="isMobile" mat-icon-button [matMenuTriggerFor]="menu" class="mobile-menu">
             <mat-icon>menu</mat-icon>
         </button>
         <!-- Mobile Menu -->
-        <mat-menu #menu="matMenu" class="navbar-menu menu">
-            <a mat-menu-item routerLink="/home">What we do</a>
-            <a mat-menu-item routerLink="/about">Who are we</a>
-            <a mat-menu-item routerLink="/services">Careers</a>
-            <a mat-menu-item routerLink="/contact">Contact Us</a>
+        <mat-menu #menu="matMenu" xPosition="before" yPosition="below" class="navbar-menu menu">
+            <a class="active" mat-menu-item>What we do</a>
+            <a mat-menu-item>Who are we</a>
+            <a mat-menu-item>Careers</a>
+            <a mat-menu-item>Contact Us</a>
         </mat-menu>
 
     </mat-toolbar>

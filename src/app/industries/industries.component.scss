@@ -1,0 +1,51 @@
+.industries-section {
+    padding-bottom: 40px;
+
+    h2 {
+        font-size: 34px;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        padding-left: 30px;
+        border-left: 4px solid #000;
+        margin-bottom: 35px;
+
+        @media (min-width:992px) {
+            padding-left: 50px;
+            font-size: 48px;
+            margin-bottom: 65px;
+        }
+    }
+
+    .dataText {
+        text-align: center;
+        padding: 0px 32px 25px;
+
+        h4 {
+            margin-top: 0;
+            border-bottom: 1px solid #C9C9C9;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-size: 24px;
+        }
+
+        a {
+            font-size: 14px;
+            color: #545454;
+            font-family: "Montserrat", sans-serif;
+            text-decoration: none;
+
+            &:after {
+                content: "";
+                background: url(../../assets/read-more.svg) center center no-repeat;
+                width: 19px;
+                height: 8px;
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+
+
+
+}

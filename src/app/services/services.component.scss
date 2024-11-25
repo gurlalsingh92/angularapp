@@ -1,20 +1,54 @@
 .serviceMain {
-    padding: 160px 0;
+    padding: 45px 0;
+
+    @media (min-width:768px) {
+        padding: 45px 0;
+    }
+
+    @media (min-width:992px) {
+        padding: 70px 0;
+    }
+
+    @media (min-width:1200px) {
+        padding: 120px 0;
+    }
 
     .serviceRow {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        flex-direction: column;
 
         &:not(:last-child) {
             border-bottom: 1px solid #000;
-            padding-bottom: 80px;
-            margin-bottom: 80px;
+            padding-bottom: 0px;
+            margin-bottom: 25px;
+
+            @media (min-width:768px) {
+                padding-bottom: 45px;
+                margin-bottom: 45px;
+            }
+
+            @media (min-width:992px) {
+                padding-bottom: 45px;
+                margin-bottom: 45px;
+            }
+
+            @media (min-width:1200px) {
+                padding-bottom: 80px;
+                margin-bottom: 80px;
+            }
         }
+
+        @media (min-width:768px) {
+            flex-direction: row;
+        }
+
+
 
         .cardMatData {
             flex: 0 0 1;
-            width: calc(100%/4);
+            width: 100%;
             min-height: 235px;
             background: none;
             border: 0;
@@ -23,11 +57,62 @@
             display: inline-flex;
             justify-content: space-between;
             flex-direction: column;
-            padding: 0 35px;
+            padding: 0px;
+            margin-bottom: 45px;
 
             &:not(:last-child) {
-                border-right: 1px solid #FF5000;
+                border-bottom: 1px solid #FF5000;
+                padding-bottom: 25px;
+
+                @media(min-width:768px) {
+                    border-bottom: 0px solid #FF5000;
+                    border-right: 1px solid #FF5000;
+                }
+
+                @media(min-width:992px) {
+                    border-right: 1px solid #FF5000;
+                }
             }
+
+            @media (min-width:768px) {
+                width: calc(100%/2);
+                padding: 0 25px;
+                border-right: 0 !important;
+
+                &:first-child,
+                &:nth-child(3) {
+                    border-right: 1px solid #FF5000 !important;
+                }
+
+                &:nth-child(3) {
+                    border-bottom: 0;
+                    margin-bottom: 0px;
+                }
+
+                &:last-child {
+                    padding-bottom: 25px;
+                    margin-bottom: 0px;
+                }
+            }
+
+            @media (min-width:992px) {
+                width: calc(100%/4);
+                border-bottom: 0;
+
+                padding: 0 20px;
+                border-bottom: 0;
+                margin-bottom: 0 !important;
+
+                &:not(:last-child) {
+                    border-right: 1px solid #FF5000 !important;
+                }
+
+            }
+
+            @media (min-width:992px) {
+                padding: 0 35px;
+            }
+
 
             * {
                 font-family: "Montserrat", sans-serif;
@@ -47,6 +132,14 @@
                 p {
                     font-size: 20px;
                     color: #000;
+
+                    @media (min-width:992px) {
+                        font-size: 16px;
+                    }
+
+                    @media (min-width:1200px) {
+                        font-size: 20px;
+                    }
                 }
             }
 

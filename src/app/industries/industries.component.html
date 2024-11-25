@@ -1,0 +1,18 @@
+<section class="industries-section">
+    <div class="container">
+        <h2>Industries</h2>
+        <div class="carousalMain slider-container">
+            <ngx-slick-carousel class="carousel" [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let slide of slides" class="slide slide-area-data">
+                    <img [src]="slide.img" alt="Slide">
+                    <div class="dataText">
+                        <h4>{{ slide.heading }}</h4>
+                        <!-- Link -->
+                        <a [href]="slide.linkUrl">{{ slide.linkText }}</a>
+                    </div>
+                </div>
+
+            </ngx-slick-carousel>
+        </div>
+    </div>
+</section>

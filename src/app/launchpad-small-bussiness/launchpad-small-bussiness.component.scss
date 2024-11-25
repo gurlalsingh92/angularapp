@@ -1,0 +1,112 @@
+.launchpad-small-bussiness {
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 15%, rgba(220, 220, 220, 1) 49%, rgba(220, 220, 220, 1) 62%, rgba(255, 255, 255, 1) 85%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 15%, rgba(220, 220, 220, 1) 49%, rgba(220, 220, 220, 1) 62%, rgba(255, 255, 255, 1) 85%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 15%, rgba(220, 220, 220, 1) 49%, rgba(220, 220, 220, 1) 62%, rgba(255, 255, 255, 1) 85%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+    padding: 45px 0;
+
+    @media (min-width:1200px) {
+        padding: 120px 0;
+    }
+
+    .flexDataContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @media (min-width:992px) {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .imagePanel {
+            flex: 0 0 100%;
+            margin: 0;
+            padding: 0 0px 0 0;
+
+            @media (min-width:992px) {
+                flex: 0 0 calc(50% - 55px);
+                padding: 0 55px 0 0;
+            }
+
+            @media (min-width:1366px) {
+                flex: 0 0 calc(100% - 550px);
+                padding: 0 55px 0 0;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 15px;
+
+                @media (min-width:992px) {
+                    width: 125%;
+                    transform: translateX(-20%);
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .content-launchpad {
+            flex: 0 0 100%;
+
+            @media (min-width:992px) {
+                flex: 0 0 50%;
+            }
+
+            @media (min-width:1366px) {
+                flex: 0 0 550px;
+            }
+
+            h4 {
+                font-size: 24px;
+                font-weight: bold;
+                font-family: "Montserrat", sans-serif;
+                line-height: 28px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #FF5000;
+                position: relative;
+                z-index: 2;
+
+                @media (min-width:992px) {
+                    font-size: 32px;
+                    line-height: 38px;
+                    padding-bottom: 30px;
+                }
+
+                span {
+                    display: block;
+                }
+
+                &:before {
+                    width: 140px;
+                    height: 140px;
+                    content: "";
+                    position: absolute;
+                    background: #FF5000;
+                    border-radius: 50%;
+                    right: 0;
+                    bottom: -60px;
+                    z-index: 0;
+                    filter: blur(60px);
+                    opacity: 0.59;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 0px;
+                margin-bottom: 40px;
+
+                @media (min-width:992px) {
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin-top: 20px;
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+}

@@ -21,9 +21,9 @@ header {
                 height: auto;
             }
 
-            @media (min-width:768px) {
-                display: none;
-            }
+            // @media (min-width:768px) {
+            //     display: none;
+            // }
         }
 
         .mainlogo {
@@ -40,13 +40,24 @@ header {
             }
         }
 
-        .menu {
+        .desktop-menu {
+            display: none;
+            margin-right: auto;
+
+            @media (min-width:768px) {
+                display: flex;
+            }
+
             a {
-                margin-right: 30px;
+
                 font-size: 14px;
                 position: relative;
                 cursor: pointer;
                 font-weight: 500;
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
 
                 &::after {
                     content: "";
@@ -76,4 +87,53 @@ header {
             }
         }
     }
+}
+
+/* Toolbar and Logo Styles */
+.app-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+}
+
+.logo-img {
+    width: 100px;
+}
+
+/* Desktop Menu */
+
+
+.desktop-menu button {
+    color: white;
+}
+
+/* Mobile Menu Button */
+// .mobile-menu-button {
+//     display: none;
+// }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+        color: #000000;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    mat-menu {
+        background-color: #1976d2;
+    }
+}
+
+.desktop-menu a {
+    color: #000000;
+}
+
+.cdk-overlay-container {
+    width: 400px;
 }
