@@ -1,21 +1,40 @@
 <mat-card class="heading-card hero-container flex-card">
-    <div class="container">
-        <div class="col-left">
-        <h3>Digital Transformation</h3>
-        <h1 class="mat-h1">The Digital World, Simplified.</h1>
-        <button class="customBtn">Learn more <img src="assets/right-arrow.svg" alt=""></button>
-        </div>
-        <div class="col-right">
-            <img src="assets/image-working-dcg.jpg" alt="">
-        </div>
+
+
+
+    <div class=" slider-container-banner ">
+        <ngx-slick-carousel class="carousel" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide slide-area-data">
+                <div class="container">
+                    <div class="col-left">
+                        <h3>{{ slide.heading }}</h3>
+                        <!-- Link -->
+                        <h1 class="mat-h1">{{ slide.Bigheading }}</h1>
+                        <button class="customBtn"><a [href]="slide.linkUrl">{{ slide.linkText }} <img
+                                    src="assets/right-arrow.svg" alt=""></a></button>
+                    </div>
+
+                    <div class="col-right">
+
+                        <img [src]="slide.img" alt="Slide">
+                    </div>
+                </div>
+
+
+            </div>
+
+        </ngx-slick-carousel>
+
+
+
     </div>
     <div class="barBottom">
         <div class="container">
             <div class="menuTab">
-            <a class="active" routerLink="/#">Digital Transformation</a>
-            <a routerLink="/#">Artificial Intelligence</a>
-            <a routerLink="/#">Supply Chain</a>
-            <a routerLink="/#">Internet of Things</a>
+                <a class="active" routerLink="/#">Digital Transformation</a>
+                <a routerLink="/#">Artificial Intelligence</a>
+                <a routerLink="/#">Supply Chain</a>
+                <a routerLink="/#">Internet of Things</a>
             </div>
         </div>
     </div>

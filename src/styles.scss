@@ -194,6 +194,64 @@ body {
     }
   }
 
+
+  .slider-container-banner {
+    position: relative;
+
+    .slick-dots {
+
+      display: flex;
+      justify-content: center;
+
+      @media (min-width:1024px) {
+        right: 10px;
+        left: auto;
+        width: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      @media (min-width:1366px) {
+        right: 60px;
+      }
+
+      li {
+        margin: 0px 5px;
+
+        @media (min-width:1024px) {
+          margin: 5px 0;
+        }
+
+        button {
+          background: #ededed;
+          margin: 5px 0;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 1px solid #D9632D;
+
+          &:before {
+            display: none;
+          }
+        }
+
+        &.slick-active {
+
+
+          button {
+            background: #D9632D;
+          }
+        }
+
+      }
+    }
+  }
+
+
+
   @media (max-width:768px) {
     #cdk-overlay-0 {
       min-width: 100vw;
