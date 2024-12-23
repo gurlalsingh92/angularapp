@@ -4,24 +4,28 @@
             <!-- Logo Section -->
             <img src="assets/DCG_Logo.svg" alt="Logo" class="header-logo" />
         </div>
-        <!-- Hamburger icon for mobile -->
+
+        <!-- Desktop Menu -->
         <div class="desktop-menu">
-            <a class="active" mat-button routerLink="/home">What we do</a>
-            <a mat-button routerLink="/about">Who are we</a>
-            <a mat-button routerLink="/services">Careers</a>
-            <a mat-button routerLink="/contact">Contact Us</a>
+            <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            <a mat-button routerLink="/rfid" routerLinkActive="active">RFID</a>
+            <!--<a mat-button routerLink="/home" routerLinkActive="active">What we do</a>
+            <a mat-button routerLink="/about" routerLinkActive="active">Who are we</a>
+            <a mat-button routerLink="/services" routerLinkActive="active">Careers</a>
+            <a mat-button routerLink="/contact" routerLinkActive="active">Contact Us</a>-->
         </div>
 
+        <!-- Hamburger icon for mobile -->
         <button *ngIf="isMobile" mat-icon-button [matMenuTriggerFor]="menu" class="mobile-menu">
             <mat-icon>menu</mat-icon>
         </button>
+
         <!-- Mobile Menu -->
         <mat-menu #menu="matMenu" xPosition="before" yPosition="below" class="navbar-menu menu">
-            <a class="active" mat-menu-item>What we do</a>
-            <a mat-menu-item>Who are we</a>
-            <a mat-menu-item>Careers</a>
-            <a mat-menu-item>Contact Us</a>
+            <a mat-menu-item routerLink="/what-we-do" routerLinkActive="active">What we do</a>
+            <a mat-menu-item routerLink="/who-are-we" routerLinkActive="active">Who are we</a>
+            <a mat-menu-item routerLink="/careers" routerLinkActive="active">Careers</a>
+            <a mat-menu-item routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
         </mat-menu>
-
     </mat-toolbar>
 </header>
