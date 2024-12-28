@@ -1,1 +1,131 @@
-<p>rfid works!</p>
+<div class="rfid-pages-main">
+    <div class="mainBannerrfid">
+        <div class="container">
+            <div class="bannerData">
+                <div class="bredcrumBanner">
+                    <ul>
+                        <li>
+                            <a>Home</a>
+                        </li>
+                        <li>
+                            <a>Solutions</a>
+                        </li>
+                        <li>
+                            Radio Frequency IDentification (RFID)
+                        </li>
+                    </ul>
+                </div>
+                <h1>Precision and Efficiency with RFID Solutions</h1>
+                <p>Dham Consulting Group delivers comprehensive RFID solutions, mastering both hardware and software to
+                    transform your
+                    asset management, inventory tracking, and operational efficiency.</p>
+            </div>
+        </div>
+        <button class="rac"><span>Request a Consultation</span> <svg width="41" height="16" viewBox="0 0 41 16"
+                fill="none">
+                <path
+                    d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z"
+                    fill="#FFFFFF" />
+            </svg></button>
+    </div>
+
+    <div class="contentArearfid">
+        <div class="container">
+            <div class="areaContentData">
+                <aside class="rfid-sidebar">
+                    <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Our Capabilities</a></li>
+                        <li><a href="#">Our Process</a></li>
+                        <li><a href="#">Benefits</a></li>
+                        <li><a href="#">Why Us</a></li>
+                        <li><a href="#">Use Cases</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Related Solutions</a></li>
+                        <li><a href="#">Next Steps</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Data Overview -->
+                <div>
+                    <h3>{{ overview.title }}</h3>
+                    <p>{{ overview.description }}</p>
+
+                    <h1>{{ capability.title }}</h1>
+                    <p>{{ capability.description }}</p>
+                    <ul>
+                        <li *ngFor="let capability of capability.capabilities">
+                            <strong>{{ capability.title }}:</strong> {{ capability.description }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    ------------------------------------------------------------------------------
+    <div>
+        <h1>{{ solutions.title }}</h1>
+        <p>{{ solutions.description }}</p>
+        <h3>Solutions</h3>
+        <ul>
+            <li *ngFor="let solution of solutions.solutionsArray">
+                <strong>{{ solution.title }}:</strong> {{ solution.description }}
+            </li>
+        </ul>
+    </div>
+    ------------------------------------------------------------------------------
+    <div>
+        <h1>{{ benefits.title }}</h1>
+        <p>{{ benefits.description }}</p>
+        <h3>Benefits</h3>
+        <ul>
+            <li *ngFor="let benefit of benefits.benefitsArray">
+                <strong>{{ benefit.title }}:</strong> {{ benefit.description }}
+            </li>
+        </ul>
+    </div>
+    ------------------------------------------------------------------------------
+    <div>
+        <h1>{{ groups.title }}</h1>
+        <p>{{ groups.description }}</p>
+        <h3>Groups</h3>
+        <ul>
+            <li *ngFor="let group of groups.groupsArray">
+                <strong>{{ group.title }}:</strong> {{ group.description }}
+            </li>
+        </ul>
+    </div>
+    ------------------------------------------------------------------------------
+    <div>
+        <h1>{{ helps.title }}</h1>
+        <h2>{{ helps.heading }}</h2>
+        <p>{{ helps.description }}</p>
+        <h3>Helps</h3>
+        <ul>
+            <li *ngFor="let help of helps.helpsArray">{{ help }}</li>
+        </ul>
+    </div>
+    ------------------------------------------------------------------------------
+    <div>
+        <h1>Partners</h1>
+        <ul>
+            <li *ngFor="let partner of partners">
+                <strong>{{ partner.heading }}</strong>
+                <img [src]="partner.image" alt="{{ partner.heading }}" />
+            </li>
+        </ul>
+    </div>
+    ------------------------------------------------------------------------------
+    <div>
+        <h1>Related Solutions</h1>
+        <ul>
+            <li *ngFor="let relatedSolution of relatedSolutions">
+                <strong>{{ relatedSolution.title }}:</strong> {{ relatedSolution.description }}
+            </li>
+        </ul>
+    </div>

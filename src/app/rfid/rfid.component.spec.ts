@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';  // <-- Import CommonModule
 import { RfidComponent } from './rfid.component';
 
 describe('RfidComponent', () => {
@@ -8,9 +8,9 @@ describe('RfidComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RfidComponent]
+      imports: [CommonModule, RfidComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(RfidComponent);
     component = fixture.componentInstance;

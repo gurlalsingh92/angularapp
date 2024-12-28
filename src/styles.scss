@@ -36,6 +36,7 @@ $angularapp-theme: mat.define-theme((color: (theme-type: light,
 $interFont: "Inter", sans-serif;
 $kantumruyProFont: "Kantumruy Pro", sans-serif;
 $Montserrat: "Montserrat", sans-serif;
+$Jaldi: "Jaldi", serif;
 
 html,
 body {
@@ -284,6 +285,93 @@ body {
       font-size: 16px !important;
       font-weight: bold;
       font-family: "Inter", sans-serif;
+    }
+  }
+
+  /* Rfid Pages */
+  .mainBannerrfid {
+    background: url(assets/rfid-banner.jpg) center center no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 50px 0;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+
+    /* Headings */
+    h1 {
+      font-size: 64px;
+      line-height: 90px;
+      font-family: $Montserrat;
+      font-weight: 400;
+      margin: 0 0 25px;
+    }
+
+    p {
+      max-width: 890px;
+      font-size: 26px;
+      line-height: 33px;
+      font-family: $Jaldi;
+    }
+
+    .rac {
+      background: #D9632D;
+      right: 0;
+      bottom: 0;
+      padding: 18px 45px;
+      border: 0px;
+      font-size: 36px;
+      line-height: 39px;
+      font-weight: 400;
+      right: 0px;
+      bottom: 0;
+      position: absolute;
+      cursor: pointer;
+
+      span {
+        max-width: 190px;
+        display: inline-block;
+        text-align: left;
+        font-family: $Jaldi;
+        color: #FFF;
+      }
+
+      svg {
+        margin-left: 40px;
+      }
+    }
+
+    /* Bredcrum */
+    .bredcrumBanner {
+      margin-bottom: 25px;
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0px;
+
+        li {
+          font-size: 24px;
+          font-weight: 400;
+          color: #FFF;
+          position: relative;
+          font-family: $Jaldi;
+
+          &:not(:last-child) {
+            &:after {
+              content: "/";
+              position: relative;
+              margin: 0 10px;
+              color: #A5A5A5;
+            }
+          }
+
+          a {
+            color: #A5A5A5;
+          }
+        }
+      }
     }
   }
 }
