@@ -4,22 +4,19 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
-  selector: 'app-rfid',
+  selector: 'app-app-re-engineering-services',
   standalone: true,
   imports: [CommonModule, SlickCarouselModule],
   schemas: [NO_ERRORS_SCHEMA],
-  templateUrl: './rfid.component.html',
-  styleUrl: './rfid.component.scss',
+  templateUrl: './app-re-engineering-services.component.html',
+  styleUrl: './app-re-engineering-services.component.scss'
 })
-export class RfidComponent implements AfterViewInit {
+export class AppReEngineeringServicesComponent implements AfterViewInit {
   sections = [
     { id: 'overviewData', name: 'Overview' },
     { id: 'capabilityData', name: 'Our Capabilities' },
-    { id: 'process', name: 'Our Process' },
     { id: 'benfits-rfid', name: 'Benefits' },
     { id: 'why-dham', name: 'Why Us' },
-    { id: 'how-rfid-help', name: 'Use Cases' },
-    { id: 'network-partners', name: 'Partners' },
     { id: 'relatedSection', name: 'Related Solutions' },
     { id: 'partners-section', name: 'Next Steps' },
   ];
@@ -86,23 +83,23 @@ export class RfidComponent implements AfterViewInit {
 
   overview = {
     title: "Overview",
-    description: "RFID (Radio Frequency Identification) is a transformative technology for tracking and managing assets across industries. At Dham Consulting Group, we leverage our deep expertise in both RFID hardware and software to design, implement, and optimize end-to-end RFID solutions. From selecting the right tags and readers to integrating with enterprise systems, we ensure seamless deployments that enhance operational efficiency, improve asset visibility, and drive business insights. Whether you need inventory management, supply chain automation, or real-time tracking, we offer tailored solutions to meet your needs. Let us help you unlock the full potential of RFID technology."
+    description: "Dham Consulting Group specializes in revitalizing legacy systems to meet modern business demands. Our Application Re-Engineering Services enhance performance, scalability, and security while minimizing disruptions. By analyzing your existing systems, we identify areas for improvement and leverage advanced technologies to re-architect your applications for future-readiness. Whether migrating to the cloud, optimizing workflows, or enhancing user experiences, we ensure seamless transitions and sustained business growth. Partner with us to modernize your technology and maximize its potential."
   };
 
   capability = {
-    title: "Explore our capabilities",
-    description: "Our RFID expertise spans hardware, software, and system integration, enabling seamless asset tracking, real-time monitoring, and data-driven decision-making. With end-to-end solutions, we simplify operations and optimize productivity.",
+    title: "Our Capabilities",
+    description: "Our Application Re-Engineering Services offer a comprehensive suite of solutions designed to modernize, optimize, and future-proof your legacy systems, ensuring they align with your evolving business needs.",
     capabilities: [
-      { title: "RFID Hardware Selection", description: "Expertise in selecting tags, readers, and antennas for varied environments." },
-      { title: "Custom RFID Software", description: "Develop applications for data capture, processing, and reporting." },
-      { title: "System Integration", description: "Seamlessly connect RFID with ERP, WMS, or custom systems." },
-      { title: "Real-Time Asset Tracking", description: "Monitor and locate assets instantly for enhanced visibility." },
-      { title: "Inventory Management", description: "Automate stock control to reduce errors and improve accuracy." },
-      { title: "RFID Deployment", description: "End-to-end setup including configuration and on-site testing." },
+      { title: "Legacy System Evaluation", description: "Analyze outdated systems to uncover gaps and modernization opportunities." },
+      { title: "Architecture Modernization", description: "Transform legacy architectures into scalable, future-ready frameworks." },
+      { title: "Code Optimization", description: "Enhance code efficiency and maintainability for improved performance." },
+      { title: "Technology Migration", description: "Transition to cutting-edge technologies for enhanced functionality and scalability." },
+      { title: "Cloud Enablement", description: "Re-engineer applications to thrive in a flexible and cost-efficient cloud environment." },
+      { title: "Data Transformation", description: "Migrate and cleanse data to ensure reliability and usability across new systems." },
 
-      { title: "Data Analytics", description: "Provide actionable insights from collected RFID data." },
-      { title: "Maintenance & Support", description: "Ongoing assistance to maintain system performance and uptime." },
-      { title: "Compliance Solutions", description: "Ensure RFID systems meet industry and regulatory standards." }
+      { title: "User Interface Upgrade", description: "Redesign interfaces for a seamless, intuitive user experience." },
+      { title: "System Integration", description: "Enable interoperability between modernized systems and enterprise platforms." },
+      { title: "Continuous Support", description: "Deliver ongoing enhancements and updates to keep applications competitive." }
     ]
   };
 
@@ -130,29 +127,29 @@ export class RfidComponent implements AfterViewInit {
   };
 
   benefits = {
-    title: "Benefits of Radio Frequency IDentification (RFID)",
-    description: "RFID technology provides real-time visibility, accuracy, and efficiency in asset and inventory management. By automating processes and reducing errors, RFID enables better decision-making, cost savings, and the ability to identify bottlenecks, ultimately optimizing operations and improving productivity.",
+    title: "Benefits",
+    description: "Application Re-Engineering Services help businesses unlock value by modernizing legacy systems, improving performance, reducing costs, and ensuring future scalability for evolving needs.",
     benefitsArray: [
-      { title: "Improved Accuracy", description: "RFID minimizes human errors, ensuring highly accurate asset and inventory tracking, leading to more reliable operational data." },
-      { title: "Real-Time Tracking", description: "RFID provides real-time visibility into asset locations, improving decision-making and enabling immediate action based on up-to-date information." },
-      { title: "Better Decision-Making", description: "With accurate, real-time data from RFID systems, managers can make better, informed decisions on resource allocation, inventory levels, and operational improvements." },
-      { title: "Enhanced Efficiency", description: "Automated tracking streamlines operations, reducing manual effort and saving time on inventory and reporting tasks." },
-      { title: "Cost Savings", description: "RFID reduces labor and operational costs by automating inventory checks, minimizing loss, and optimizing supply chain processes." },
-      { title: "Identifying Bottlenecks", description: "RFID pinpoints inefficiencies in supply chains and operations, identifying delays and underused resources." },
+      { title: "Enhanced Performance", description: "Modernized systems deliver faster processing, improved uptime, and seamless user interactions, ensuring peak efficiency for your operations." },
+      { title: "Cost Savings", description: "Eliminate inefficiencies and reduce maintenance costs by replacing outdated systems with optimized, scalable architectures." },
+      { title: "Future-Readiness", description: "Ensure your applications are equipped to adapt to changing business needs and emerging technologies." },
+      { title: "Improved Security", description: "Strengthen data protection by integrating robust security protocols and addressing vulnerabilities in legacy systems." },
+      { title: "Seamless Integration", description: "Streamline workflows by integrating re-engineered systems with enterprise platforms and modern tools." },
+      { title: "Enhanced User Experience", description: "Updated interfaces and functionalities provide a modern, intuitive experience that boosts productivity and satisfaction." },
 
     ]
   };
 
   groups = {
-    title: "Why Dham Consulting Group",
-    description: "RFID technology provides real-time visibility, accuracy, and efficiency in asset and inventory management. By automating processes and reducing errors, RFID enables better decision-making, cost savings, and the ability to identify bottlenecks, ultimately optimizing operations and improving productivity.",
+    title: "Why Choose Dham Consulting Group",
+    description: " ",
     groupsArray: [
-      { title: "Improved Accuracy", description: "RFID reduces human errors, enabling precise asset and inventory tracking for reliable data." },
-      { title: "Real-Time Tracking", description: "RFID delivers real-time asset visibility, enhancing decision-making and enabling prompt actions with current data." },
-      { title: "Enhanced Efficiency", description: "Automated tracking streamlines operations, reducing manual effort and saving time on inventory and reporting tasks." },
-      { title: "Cost Savings", description: "RFID reduces labor and operational costs by automating inventory checks, minimizing loss, and optimizing supply chain processes." },
-      { title: "Better Decision-Making", description: "Accurate, real-time RFID data helps managers make informed decisions on resources, inventory, and operations." },
-      { title: "Identifying Bottlenecks", description: "RFID pinpoints inefficiencies in supply chains and operations, identifying delays and underused resources." }
+      { title: "Proven Expertise", description: "Decades of experience in transforming legacy systems into modern, efficient applications." },
+      { title: "Tailored Solutions", description: "We align re-engineering strategies with your unique business goals and technology needs." },
+      { title: "End-to-End Support", description: "Comprehensive services covering analysis, design, implementation, and maintenance for seamless transitions." },
+      { title: "Focus on Innovation", description: "Integration of cutting-edge technologies to future-proof your applications for growth and evolution." },
+      { title: "Timely Delivery", description: "Agile processes ensure re-engineering projects are completed on time without compromising quality." },
+      { title: "", description: "" }
     ]
   };
 
@@ -235,12 +232,11 @@ export class RfidComponent implements AfterViewInit {
   ];
 
   relatedSolutions = [
-    { title: "Application Management Services", description: "RFID solutions require ongoing management to ensure smooth performance, from system updates to monitoring, making application management a key service." },
-    { title: "Artificial Intelligence (AI)", description: "AI can optimize RFID data analysis, enabling predictive maintenance, smarter inventory management, and real-time decision-making based on RFID data." },
+    { title: "Cloud Services", description: "Migrate, modernize, and optimize re-engineered applications for secure, scalable, and cost-efficient cloud environments." },
+    { title: "Application Management Services", description: "Maintain and support re-engineered applications with updates, monitoring, and performance optimization." },
 
-    { title: "Cloud Computing Services", description: "Cloud computing enhances RFID by enabling remote data access and scalable storage for RFID system data, supporting real-time tracking and analytics." },
-    { title: "Application Development Services", description: "Custom applications tailored to integrate RFID technology, providing seamless operation and improved user experience across industries like logistics, retail, and healthcare." },
-    { title: "Internet of Things (IoT)", description: "RFID is a critical component of IoT, as it connects physical objects to the digital world, enabling smart automation, asset tracking, and real-time monitoring." },
+    { title: "Application Development Services", description: "Extend and enhance re-engineered applications by building new features or integrating advanced functionalities." },
+    { title: "Artificial Intelligence", description: "Integrate AI solutions into re-engineered applications for smarter processes and data-driven decision-making." },
   ];
 
   ngOnInit(): void { }

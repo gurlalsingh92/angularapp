@@ -11,14 +11,14 @@
                             <a>Solutions</a>
                         </li>
                         <li>
-                            Radio Frequency IDentification (RFID)
+                            Physical Access Control
                         </li>
                     </ul>
                 </div>
-                <h1>Precision and Efficiency with RFID Solutions</h1>
-                <p>Dham Consulting Group delivers comprehensive RFID solutions, mastering both hardware and software to
-                    transform your
-                    asset management, inventory tracking, and operational efficiency.</p>
+                <h1>Secure Spaces, Simplified Access</h1>
+                <p>Enhance your facility's security with tailored physical access control solutions. Manage and monitor
+                    access with ease
+                    while safeguarding your people and assets.</p>
             </div>
         </div>
         <button class="rac"><span>Request a Consultation</span> <svg width="41" height="16" viewBox="0 0 41 16"
@@ -133,32 +133,7 @@
                     </div>
                 </div>
 
-                <div id="how-rfid-help" class="how-rfid-help pleft">
-                    <div class="part-help">
 
-                        <h2>{{ help.title }}</h2>
-
-                        <ul class="tabs">
-                            <li *ngFor="let tab of help2.tabArray; let i = index" (click)="selectTab(i)"
-                                [class.active]="selectedTab === i">
-                                <button>{{ tab }}</button>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div class="part-help">
-
-                        <div class="dataDescription">
-                            <ul class="tab-content">
-                                <li *ngFor="let help of help2.helps; let i = index" [hidden]="selectedTab !== i">
-                                    <h2>{{ help.title }}</h2>
-                                    <p>{{ help.description }}</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
                 <div id="network-partners">
                     <div class="container pleft">
                         <div class="boxcapabilitys">
@@ -174,17 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="relatedSection">
-                    <div class="container pleft">
-                        <h3>Related Solutions</h3>
-                        <ul>
-                            <li *ngFor="let relatedSolution of relatedSolutions">
-                                <h5>{{ relatedSolution.title }}:</h5>
-                                <p>{{ relatedSolution.description }}</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
 
 
                 <div id="partners-section">

@@ -8,11 +8,31 @@
         <!-- Desktop Menu -->
         <div class="desktop-menu">
             <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-            <a mat-button routerLink="/rfid" routerLinkActive="active">RFID</a>
-            <!--<a mat-button routerLink="/home" routerLinkActive="active">What we do</a>
+            <div class="menuDropdown">
+                <span>Solutions</span>
+                <div class="dropdown-menu">
+                    <a mat-button routerLink="/rfid" routerLinkActive="active">RFID</a>
+                    <a mat-button routerLink="/app-development-service" routerLinkActive="active">App Development
+                        Service</a>
+                    <a mat-button routerLink="/app-application-management-service" routerLinkActive="active">App
+                        Management
+                        Services</a>
+                    <a mat-button routerLink="/app-reengineer" routerLinkActive="active">App Re-engineering Services</a>
+                    <a mat-button routerLink="/app-physical-access-control" routerLinkActive="active">Physical Access
+                        Control</a>
+
+                    <a mat-button routerLink="/app-cloud-services" routerLinkActive="active">Cloud Services</a>
+                    <a mat-button routerLink="/app-internet-of-things" routerLinkActive="active">Internet of Things</a>
+                    <a mat-button routerLink="/app-small-business" routerLinkActive="active">Small Business</a>
+                </div>
+            </div>
+
+
+
+            <a mat-button routerLink="/home" routerLinkActive="active">What we do</a>
             <a mat-button routerLink="/about" routerLinkActive="active">Who are we</a>
             <a mat-button routerLink="/services" routerLinkActive="active">Careers</a>
-            <a mat-button routerLink="/contact" routerLinkActive="active">Contact Us</a>-->
+            <a mat-button routerLink="/contact" routerLinkActive="active">Contact Us</a>
         </div>
 
         <!-- Hamburger icon for mobile -->

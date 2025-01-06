@@ -4,23 +4,19 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
-  selector: 'app-rfid',
+  selector: 'app-small-business',
   standalone: true,
   imports: [CommonModule, SlickCarouselModule],
   schemas: [NO_ERRORS_SCHEMA],
-  templateUrl: './rfid.component.html',
-  styleUrl: './rfid.component.scss',
+  templateUrl: './small-business.component.html',
+  styleUrl: './small-business.component.scss'
 })
-export class RfidComponent implements AfterViewInit {
+export class SmallBusinessComponent implements AfterViewInit {
   sections = [
     { id: 'overviewData', name: 'Overview' },
     { id: 'capabilityData', name: 'Our Capabilities' },
-    { id: 'process', name: 'Our Process' },
     { id: 'benfits-rfid', name: 'Benefits' },
     { id: 'why-dham', name: 'Why Us' },
-    { id: 'how-rfid-help', name: 'Use Cases' },
-    { id: 'network-partners', name: 'Partners' },
-    { id: 'relatedSection', name: 'Related Solutions' },
     { id: 'partners-section', name: 'Next Steps' },
   ];
 
@@ -86,23 +82,23 @@ export class RfidComponent implements AfterViewInit {
 
   overview = {
     title: "Overview",
-    description: "RFID (Radio Frequency Identification) is a transformative technology for tracking and managing assets across industries. At Dham Consulting Group, we leverage our deep expertise in both RFID hardware and software to design, implement, and optimize end-to-end RFID solutions. From selecting the right tags and readers to integrating with enterprise systems, we ensure seamless deployments that enhance operational efficiency, improve asset visibility, and drive business insights. Whether you need inventory management, supply chain automation, or real-time tracking, we offer tailored solutions to meet your needs. Let us help you unlock the full potential of RFID technology."
+    description: "Dham Consulting Group specializes in providing small businesses with enterprise-level IT services tailored to their needs. From setting up domains and email accounts to managing cloud solutions and securing your technology infrastructure, we handle the complexities so you can focus on growing your business. Our personalized approach ensures you receive reliable, scalable, and affordable solutions that keep you competitive in today’s market. With Dham Consulting Group, you gain a trusted partner committed to simplifying technology and delivering results."
   };
 
   capability = {
-    title: "Explore our capabilities",
-    description: "Our RFID expertise spans hardware, software, and system integration, enabling seamless asset tracking, real-time monitoring, and data-driven decision-making. With end-to-end solutions, we simplify operations and optimize productivity.",
+    title: "Our Capabilities",
+    description: "Our services empower small businesses with the tools and support needed to manage technology effectively, improve efficiency, and compete on a larger scale—all at an affordable cost.",
     capabilities: [
-      { title: "RFID Hardware Selection", description: "Expertise in selecting tags, readers, and antennas for varied environments." },
-      { title: "Custom RFID Software", description: "Develop applications for data capture, processing, and reporting." },
-      { title: "System Integration", description: "Seamlessly connect RFID with ERP, WMS, or custom systems." },
-      { title: "Real-Time Asset Tracking", description: "Monitor and locate assets instantly for enhanced visibility." },
-      { title: "Inventory Management", description: "Automate stock control to reduce errors and improve accuracy." },
-      { title: "RFID Deployment", description: "End-to-end setup including configuration and on-site testing." },
+      { title: "Domain Management", description: "Secure and manage your business domain with ease." },
+      { title: "Email Setup", description: "Professional email accounts for seamless communication." },
+      { title: "Cloud Integration", description: "Enable remote work with scalable cloud solutions." },
+      { title: "Data Backup", description: "Protect your business with automated data backups." },
+      { title: "Cybersecurity", description: "Safeguard systems with robust security measures." },
+      { title: "IT Support", description: "Quick and reliable help desk services for your team." },
 
-      { title: "Data Analytics", description: "Provide actionable insights from collected RFID data." },
-      { title: "Maintenance & Support", description: "Ongoing assistance to maintain system performance and uptime." },
-      { title: "Compliance Solutions", description: "Ensure RFID systems meet industry and regulatory standards." }
+      { title: "Software Setup", description: "Install and configure tools to streamline operations." },
+      { title: "Network Configuration", description: "Set up fast, secure, and reliable network systems." },
+      { title: "Tech Consulting", description: "Tailored advice to optimize your technology investments." }
     ]
   };
 
@@ -130,29 +126,29 @@ export class RfidComponent implements AfterViewInit {
   };
 
   benefits = {
-    title: "Benefits of Radio Frequency IDentification (RFID)",
-    description: "RFID technology provides real-time visibility, accuracy, and efficiency in asset and inventory management. By automating processes and reducing errors, RFID enables better decision-making, cost savings, and the ability to identify bottlenecks, ultimately optimizing operations and improving productivity.",
+    title: "Benefits",
+    description: "Our services give small businesses access to enterprise-grade technology, improving efficiency, enhancing security, and freeing up time to focus on growth—all while staying cost-effective.",
     benefitsArray: [
-      { title: "Improved Accuracy", description: "RFID minimizes human errors, ensuring highly accurate asset and inventory tracking, leading to more reliable operational data." },
-      { title: "Real-Time Tracking", description: "RFID provides real-time visibility into asset locations, improving decision-making and enabling immediate action based on up-to-date information." },
-      { title: "Better Decision-Making", description: "With accurate, real-time data from RFID systems, managers can make better, informed decisions on resource allocation, inventory levels, and operational improvements." },
-      { title: "Enhanced Efficiency", description: "Automated tracking streamlines operations, reducing manual effort and saving time on inventory and reporting tasks." },
-      { title: "Cost Savings", description: "RFID reduces labor and operational costs by automating inventory checks, minimizing loss, and optimizing supply chain processes." },
-      { title: "Identifying Bottlenecks", description: "RFID pinpoints inefficiencies in supply chains and operations, identifying delays and underused resources." },
+      { title: "Enhanced Productivity", description: "Streamline daily operations with professional IT tools and reliable support." },
+      { title: "Improved Security", description: "Protect your data and systems with enterprise-grade security solutions." },
+      { title: "Cost Savings", description: "Access affordable, scalable solutions without the need for in-house IT staff." },
+      { title: "Scalable Solutions", description: "Grow your business with flexible IT systems that adapt to your needs." },
+      { title: "Time Efficiency", description: "Save valuable time by outsourcing complex tech tasks to experts." },
+      { title: "Professional Image", description: "Establish credibility with professional email, secure systems, and reliable tech." },
 
     ]
   };
 
   groups = {
-    title: "Why Dham Consulting Group",
-    description: "RFID technology provides real-time visibility, accuracy, and efficiency in asset and inventory management. By automating processes and reducing errors, RFID enables better decision-making, cost savings, and the ability to identify bottlenecks, ultimately optimizing operations and improving productivity.",
+    title: "Why Choose Dham Consulting Group",
+    description: " ",
     groupsArray: [
-      { title: "Improved Accuracy", description: "RFID reduces human errors, enabling precise asset and inventory tracking for reliable data." },
-      { title: "Real-Time Tracking", description: "RFID delivers real-time asset visibility, enhancing decision-making and enabling prompt actions with current data." },
-      { title: "Enhanced Efficiency", description: "Automated tracking streamlines operations, reducing manual effort and saving time on inventory and reporting tasks." },
-      { title: "Cost Savings", description: "RFID reduces labor and operational costs by automating inventory checks, minimizing loss, and optimizing supply chain processes." },
-      { title: "Better Decision-Making", description: "Accurate, real-time RFID data helps managers make informed decisions on resources, inventory, and operations." },
-      { title: "Identifying Bottlenecks", description: "RFID pinpoints inefficiencies in supply chains and operations, identifying delays and underused resources." }
+      { title: "Personalized Solutions", description: "Tailored IT services designed specifically for your business needs." },
+      { title: "Affordable Expertise", description: "Enterprise-level solutions at a cost small businesses can afford." },
+      { title: "Reliable Support", description: "Dependable and responsive assistance whenever you need it." },
+      { title: "Scalable Approach", description: "Flexible services that grow with your business as it expands." },
+      { title: "Trusted Partner", description: "A commitment to simplifying technology and driving your success." },
+      { title: " ", description: " " }
     ]
   };
 

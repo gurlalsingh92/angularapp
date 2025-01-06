@@ -11,14 +11,14 @@
                             <a>Solutions</a>
                         </li>
                         <li>
-                            Radio Frequency IDentification (RFID)
+                            Cloud Services
                         </li>
                     </ul>
                 </div>
-                <h1>Precision and Efficiency with RFID Solutions</h1>
-                <p>Dham Consulting Group delivers comprehensive RFID solutions, mastering both hardware and software to
-                    transform your
-                    asset management, inventory tracking, and operational efficiency.</p>
+                <h1>Transforming Businesses Through the Cloud</h1>
+                <p>Optimize your cloud journey with expert consulting services. We help you migrate, modernize, and
+                    manage cloud solutions
+                    tailored to your business needs, driving efficiency and scalability.</p>
             </div>
         </div>
         <button class="rac"><span>Request a Consultation</span> <svg width="41" height="16" viewBox="0 0 41 16"
@@ -66,36 +66,14 @@
                         <p>{{ capability.description }}</p>
                         <ul class="boxcapabilitys">
                             <li class="boxcapability" *ngFor="let capability of capability.capabilities">
-                                <h5>{{ capability.title }}:</h5>
+                                <h5>{{ capability.title }}</h5>
                                 <p>{{ capability.description }}</p>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="processData" id="process">
-                    <div class="container pleft">
-                        <h2>{{ solutions.title }}</h2>
-                        <p>{{ solutions.description }}</p>
 
-                        <div class="boxcapabilitys">
-                            <ngx-slick-carousel #slickModal="slick-carousel" style="width: 1080px;" class="carousel"
-                                [config]="slideConfig">
-                                <div ngxSlickItem class="slide slide-area-data boxcapability"
-                                    *ngFor="let solution of solutions.solutionsArray">
-                                    <h5>{{ solution.title }}:</h5>
-                                    <p>{{ solution.description }}</p>
-                                </div>
-                            </ngx-slick-carousel>
-
-                        </div>
-                        <!-- Custom Left Button -->
-                        <button class="carousel-btn left" (click)="slickModal.slickPrev()">&#10094;</button>
-
-                        <!-- Custom Right Button -->
-                        <button class="carousel-btn right" (click)="slickModal.slickNext()">&#10095;</button>
-                    </div>
-                </div>
 
                 <div id="benfits-rfid">
                     <div class="container pleft">
@@ -126,39 +104,14 @@
                         <p>{{ groups.description }}</p>
                         <ul class="boxcapabilitys">
                             <li class="boxcapability" *ngFor="let group of groups.groupsArray">
-                                <h5>{{ group.title }}:</h5>
+                                <h5>{{ group.title }}</h5>
                                 <p>{{ group.description }}</p>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div id="how-rfid-help" class="how-rfid-help pleft">
-                    <div class="part-help">
 
-                        <h2>{{ help.title }}</h2>
-
-                        <ul class="tabs">
-                            <li *ngFor="let tab of help2.tabArray; let i = index" (click)="selectTab(i)"
-                                [class.active]="selectedTab === i">
-                                <button>{{ tab }}</button>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div class="part-help">
-
-                        <div class="dataDescription">
-                            <ul class="tab-content">
-                                <li *ngFor="let help of help2.helps; let i = index" [hidden]="selectedTab !== i">
-                                    <h2>{{ help.title }}</h2>
-                                    <p>{{ help.description }}</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
                 <div id="network-partners">
                     <div class="container pleft">
                         <div class="boxcapabilitys">

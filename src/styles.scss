@@ -306,6 +306,11 @@ body {
       font-family: $Montserrat;
       font-weight: 400;
       margin: 0 0 25px;
+
+      @media (max-width:1439px) {
+        font-size: 45px;
+        line-height: 60px;
+      }
     }
 
     p {
@@ -313,6 +318,12 @@ body {
       font-size: 26px;
       line-height: 33px;
       font-family: $Jaldi;
+
+      @media (max-width:1439px) {
+        max-width: 700px;
+        font-size: 22px;
+        line-height: 29px;
+      }
     }
 
     .rac {
@@ -329,12 +340,21 @@ body {
       position: absolute;
       cursor: pointer;
 
+      @media (max-width:1439px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+
       span {
         max-width: 190px;
         display: inline-block;
         text-align: left;
         font-family: $Jaldi;
         color: #FFF;
+
+        @media (max-width:1439px) {
+          max-width: 150px;
+        }
       }
 
       svg {
@@ -358,6 +378,10 @@ body {
           position: relative;
           font-family: $Jaldi;
 
+          @media (max-width:1439px) {
+            font-size: 20px;
+          }
+
           &:not(:last-child) {
             &:after {
               content: "/";
@@ -373,5 +397,661 @@ body {
         }
       }
     }
+  }
+
+  /* Rfid Content */
+  .contentArearfid {
+    padding-top: 60px;
+
+    .container.areaSide {
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      height: 100%;
+    }
+
+    .areaContentData {
+      /*display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;*/
+      position: relative;
+
+      .rfid-sidebar {
+        width: 315px;
+        position: absolute;
+        left: 80px;
+        top: 0;
+        height: 100%;
+        z-index: 2;
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          position: sticky;
+          top: 30px;
+
+          li {
+            margin: 0 0 15px;
+
+            a {
+              font-size: 16px;
+              line-height: 34px;
+              font-family: $kantumruyProFont;
+              padding-left: 20px;
+              position: relative;
+              font-weight: 500;
+              color: #000;
+              text-decoration: none;
+              display: inline-block;
+
+              &:before {
+                width: 2px;
+                height: 100%;
+                content: "";
+                background: #D9632D;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: all 0.5s;
+              }
+
+              &:hover {
+                color: #D9632D;
+
+                &:before {
+                  opacity: 1;
+                  transition: all 0.5s;
+                }
+              }
+            }
+
+            &.active {
+              a {
+                color: #D9632D;
+                font-weight: bold;
+
+                &:before {
+                  opacity: 1;
+                  transition: all 0.5s;
+                }
+              }
+            }
+          }
+
+          .imageContentArea {
+            background: #D9632D;
+            text-align: center;
+            max-width: 215px;
+
+            h3 {
+              padding: 15px 10px 20px;
+              color: #FFF;
+              font-size: 24px;
+              display: table;
+              margin: 0;
+            }
+
+            img {
+              display: block;
+
+              line-height: 1;
+            }
+          }
+
+
+
+
+        }
+      }
+    }
+
+    .overview-capabilities {
+      .pleft {
+        padding-left: 315px;
+        position: relative;
+      }
+
+      h2 {
+        font-size: 34px;
+        line-height: 40px;
+        font-weight: 500;
+        font-family: $Jaldi;
+        margin: 0 0 15px;
+      }
+
+      p {
+        margin: 0 0 25px;
+        font-size: 16px;
+        line-height: 28px;
+        font-family: $kantumruyProFont;
+      }
+
+      .boxcapabilitys {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        list-style-type: none;
+        align-items: stretch;
+        padding: 0;
+        position: relative;
+        z-index: 7;
+
+        .boxcapability {
+          max-width: calc(100%/3 - 15px);
+          padding: 23px;
+          border: 1px solid #EBEBEB;
+          box-sizing: border-box;
+          margin-bottom: 25px;
+          border-radius: 10px;
+          transition: all 0.5s;
+
+          h5 {
+            font-size: 20px;
+            font-weight: 500;
+            font-family: $kantumruyProFont;
+            color: #D9632D;
+            margin: 0 0 15px;
+            padding-right: 0px;
+          }
+
+          p {
+            margin: 0;
+            font-size: 16px;
+            font-family: $kantumruyProFont;
+          }
+
+          &:hover {
+            transform: scale(1);
+            transition: all 0.5s;
+          }
+        }
+      }
+
+
+    }
+
+    .processData {
+      background: #F0F0F0;
+      padding: 100px 0 100px;
+      position: relative;
+
+      .container {
+        text-align: right;
+      }
+
+      h2,
+      p {
+        text-align: left;
+      }
+
+      p {
+        margin-bottom: 70px;
+      }
+
+      .boxcapabilitys {
+        .slick-slider {
+          width: 100% !important;
+
+          .slick-list {
+            margin: 0 -30px;
+
+            .slick-slide {
+              margin: 0 30px;
+              min-height: 200px;
+              text-align: left;
+
+              h5 {
+                padding: 0;
+              }
+
+              &.boxcapability {
+                border: 1px solid #D9632D;
+              }
+            }
+          }
+        }
+      }
+
+      .carousel-btn {
+        border: 1px solid #AFAFAF;
+        width: 50px;
+        height: 50px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: url(assets/next-orange-arrow.svg) center center no-repeat;
+        background-size: 30px;
+        border-radius: 50%;
+        font-size: 0;
+
+        cursor: pointer;
+        z-index: 6;
+        position: relative;
+
+        &.left {
+          margin-right: 15px;
+          background: url(assets/prev-orange-arrow.svg) center center no-repeat;
+        }
+
+        &:hover {
+          background-color: #FFF;
+        }
+      }
+    }
+
+    #benfits-rfid {
+      padding: 70px 0;
+
+      .container {
+        text-align: right;
+      }
+
+      h2,
+      p {
+        text-align: left;
+      }
+
+      p {
+        margin-bottom: 60px;
+      }
+
+      .boxcapabilitys {
+        .slick-slider {
+          width: 100% !important;
+
+          .slick-list {
+            margin: 0 -5px;
+
+            .slick-slide {
+              margin: 0 5px;
+              min-height: 300px;
+
+              &.boxcapability {
+                border: 0px solid #D9632D;
+                background-color: #D9D9D9;
+                text-align: left;
+
+                h5 {
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+
+
+      }
+
+      .carousel-btn {
+        border: 1px solid #D9632D;
+        width: 50px;
+        height: 50px;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: url(assets/next-white-arrow.svg) center center no-repeat #D9632D;
+        background-size: 30px;
+        border-radius: 50%;
+        font-size: 0;
+
+        cursor: pointer;
+        z-index: 6;
+        position: relative;
+
+        &.left {
+          margin-right: 15px;
+          background: url(assets/prev-white-arrow.svg) center center no-repeat #D9632D;
+        }
+
+        &:hover {
+          background-color: #000;
+          border-color: #000;
+        }
+      }
+    }
+
+    #why-dham {
+      padding: 30px 0;
+
+      .boxcapabilitys {
+        .boxcapability {
+          border: 1px solid #D9632D;
+          background-color: #FFF;
+          max-width: calc(100% / 3);
+          width: 100%;
+          margin: 0;
+          border-radius: 0;
+
+          &:nth-child(2) {
+            border-left: 0;
+            border-right: 0;
+
+          }
+
+          &:nth-child(4) {
+
+            border-top: 0px;
+          }
+
+          &:nth-child(5) {
+            border-left: 0;
+            border-right: 0;
+            border-top: 0px;
+          }
+
+          &:last-child {
+            border-top: 0;
+
+          }
+
+          h5 {
+            color: #000;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .how-rfid-help {
+      background: #333333;
+      display: flex;
+      align-items: stretch;
+
+      .part-help {
+        width: 50%;
+        color: #FFF;
+        position: relative;
+        z-index: 8;
+
+        &:last-child {
+          background: url(assets/manf.jpg) center center no-repeat;
+          display: flex;
+          align-items: flex-end;
+          flex: 0 0 50%;
+
+          .dataDescription {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 45px 25px;
+
+            ul {
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                margin: 0;
+
+                h2 {
+                  font-size: 20px;
+                  font-family: $kantumruyProFont;
+                  line-height: 1;
+                  margin: 0 0 5px;
+                }
+
+                p {
+                  font-size: 24px;
+                  font-family: $kantumruyProFont;
+                  margin: 0;
+
+                  @media (max-width:1439px) {
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+
+
+        &:first-child {
+          padding: 85px 90px;
+
+          h2 {
+            font-size: 40px;
+            font-family: $Jaldi;
+            margin: 0 0 100px;
+
+            @media (max-width:1499px) {
+              margin: 0 0 50px;
+            }
+          }
+
+          ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0;
+
+            li {
+              width: 48%;
+              margin-bottom: 30px;
+
+
+              button {
+                background: none;
+                border: 1px solid #D9632D;
+                border-radius: 10px;
+                padding: 14px 15px;
+                min-width: 85%;
+                font-size: 25px;
+                font-weight: 500;
+                color: #FFF;
+                font-family: $kantumruyProFont;
+                text-align: left;
+                transition: all 0.5s;
+                cursor: pointer;
+                position: relative;
+                z-index: 7;
+
+                @media (max-width:1499px) {
+                  font-size: 22px;
+                }
+
+                @media (max-width:1439px) {
+                  font-size: 18px;
+                }
+
+                &:hover {
+                  background: #D9632D;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #partners-section {
+      background: #D9D9D9;
+      padding: 80px 0;
+
+      h2 {
+        font-size: 48px;
+        line-height: 55px;
+        font-weight: 300;
+        font-family: $Montserrat;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: $Montserrat;
+        line-height: 38px;
+      }
+
+      .btnBottom {
+        background: #FF5000;
+        border: 0;
+        border-radius: 0;
+        font-size: 18px;
+        font-family: $Montserrat;
+        color: #FFF;
+        padding: 15px 25px;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 7;
+        position: relative;
+
+        img {
+          margin-left: 45px;
+          line-height: 1;
+          display: inline-block;
+        }
+
+        &:hover {
+          background: #000;
+        }
+      }
+    }
+
+    #relatedSection {
+      padding: 100px 0;
+
+      h3 {
+        font-size: 40px;
+        line-height: 50px;
+        font-family: $Montserrat;
+        font-weight: 500;
+        margin: 0 0 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        z-index: 7;
+
+        li {
+          padding: 20px 0;
+          border-bottom: 1px solid #CBCBCB;
+          display: flex;
+          align-items: center;
+
+          h5 {
+            font-family: $Montserrat;
+            font-size: 20px;
+            color: #D9632D;
+            min-width: 200px;
+            margin: 0 60px 0 0;
+            font-weight: 500;
+            flex: 0 0 200px;
+          }
+
+          p {
+            font-family: $Montserrat;
+            font-size: 20px;
+            color: #000;
+            margin: 0;
+            font-weight: 600;
+            flex: 0 0 calc(100% - 260px);
+          }
+        }
+      }
+
+    }
+
+    #network-partners {
+      padding: 100px 0 0;
+
+
+      .boxcapabilitys {
+        .slick-slider {
+          width: 100% !important;
+
+          .slick-list {
+            margin: 0 -30px;
+
+            .slick-slide {
+              margin: 0 30px;
+              min-height: 200px;
+
+              &.boxcapability {
+                border: 1px solid #D9632D;
+                background-color: #ECECEC;
+                text-align: center;
+                display: inline-flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                h5 {
+                  margin: 20px 0 0;
+                  padding: 0;
+                }
+
+                img {
+                  max-height: 70px;
+                  margin: 0 auto;
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+
+
+      }
+    }
+
+
+    .tabs {
+      display: flex;
+      list-style: none;
+      gap: 10px;
+      padding: 0;
+
+      li {
+        display: inline;
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          background: #e0e0e0;
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+
+        &.active {
+          button {
+            background: #D9632D;
+            color: #fff;
+          }
+
+          .tab-content {
+            list-style: none;
+            padding: 0;
+
+            li {
+              margin-bottom: 20px;
+              padding: 10px;
+
+            }
+          }
+        }
+      }
+
+
+    }
+
+
   }
 }
