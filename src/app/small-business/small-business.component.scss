@@ -1,5 +1,21 @@
 .contentArearfid {
+    #why-dham {
+        padding-bottom: 70px;
+
+        .boxcapabilitys {
+            .boxcapability {
+                &:last-child {
+                    @media (max-width:767px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
     #benfits-rfid {
+        padding-top: 0;
+
         .boxcapabilitys {
             .slick-slider {
                 .slide {

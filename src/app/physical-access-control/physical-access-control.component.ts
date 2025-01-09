@@ -69,6 +69,22 @@ export class PhysicalAccessControlComponent implements AfterViewInit {
     dots: false,
     arrows: false,
     swipe: true,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   slideConfignew = {
@@ -80,6 +96,30 @@ export class PhysicalAccessControlComponent implements AfterViewInit {
     swipe: true,
     autoplay: true,          // Enables autoplay
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+
+    ],
   };
 
   overview = {

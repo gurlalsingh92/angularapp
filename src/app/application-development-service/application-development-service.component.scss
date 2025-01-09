@@ -1,0 +1,23 @@
+.contentArearfid {
+    #why-dham {
+        .boxcapabilitys {
+            .boxcapability {
+                &:last-child {
+                    @media (max-width:767px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #benfits-rfid {
+        .boxcapabilitys {
+            .boxcapability {
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

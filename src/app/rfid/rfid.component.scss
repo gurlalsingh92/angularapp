@@ -1,10 +1,27 @@
 .contentArearfid {
+    #why-dham {
+        padding-bottom: 70px;
+    }
+
     .overview-capabilities {
         #process {
             .boxcapabilitys {
                 .boxcapability {
                     h5 {
                         min-height: 48px;
+
+                        @media (max-width:1199px) {
+                            margin-bottom: 10px;
+                            min-height: 5px;
+                        }
+
+                        @media (max-width:991px) {
+                            min-height: 37px;
+                        }
+
+                        @media (max-width:767px) {
+                            min-height: 5px;
+                        }
                     }
 
                     p {
@@ -13,6 +30,22 @@
                         @media (max-width:1439px) {
                             min-height: 170px;
                         }
+
+                        @media (max-width:1199px) {
+                            min-height: 140px;
+                        }
+
+                        @media (max-width:991px) {
+                            min-height: 170px;
+                        }
+
+                        @media (max-width:767px) {
+                            min-height: 20px;
+                        }
+
+
+
+
                     }
                 }
             }
@@ -30,6 +63,22 @@
 
                             @media (max-width:1439px) {
                                 min-height: 170px;
+                            }
+
+                            @media (max-width:1365px) {
+                                min-height: 200px;
+                            }
+
+                            @media (max-width:1199px) {
+                                min-height: 140px;
+                            }
+
+                            @media (max-width:991px) {
+                                min-height: 200px;
+                            }
+
+                            @media (max-width:767px) {
+                                min-height: 50px;
                             }
                         }
                     }

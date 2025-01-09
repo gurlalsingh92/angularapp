@@ -301,8 +301,8 @@ body {
 
     /* Headings */
     h1 {
-      font-size: 64px;
-      line-height: 90px;
+      font-size: 50px;
+      line-height: 60px;
       font-family: $Montserrat;
       font-weight: 400;
       margin: 0 0 25px;
@@ -311,10 +311,27 @@ body {
         font-size: 45px;
         line-height: 60px;
       }
+
+      @media (max-width:1439px) {
+        font-size: 35px;
+        line-height: 50px;
+      }
+
+      @media (max-width:991px) {
+        font-size: 26px;
+        line-height: 40px;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width:767px) {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 0;
+      }
     }
 
     p {
-      max-width: 890px;
+      max-width: 940px;
       font-size: 26px;
       line-height: 33px;
       font-family: $Jaldi;
@@ -323,6 +340,20 @@ body {
         max-width: 700px;
         font-size: 22px;
         line-height: 29px;
+      }
+
+      @media (max-width:991px) {
+        max-width: 75%;
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 0px;
+      }
+
+      @media (max-width:767px) {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 0px;
       }
     }
 
@@ -345,6 +376,12 @@ body {
         line-height: 35px;
       }
 
+      @media (max-width:1199px) {
+        font-size: 18px;
+        line-height: 23px;
+        padding: 5px 20px;
+      }
+
       span {
         max-width: 190px;
         display: inline-block;
@@ -355,10 +392,19 @@ body {
         @media (max-width:1439px) {
           max-width: 150px;
         }
+
+        @media (max-width:1199px) {
+          max-width: 95px;
+        }
       }
 
       svg {
         margin-left: 40px;
+
+        @media (max-width:1199px) {
+          margin-left: 15px;
+          max-width: 25px;
+        }
       }
     }
 
@@ -366,10 +412,18 @@ body {
     .bredcrumBanner {
       margin-bottom: 25px;
 
+      @media (max-width:991px) {
+        margin-bottom: 10px;
+      }
+
       ul {
         display: flex;
         list-style-type: none;
         padding: 0px;
+
+        @media (max-width:991px) {
+          margin: 0px;
+        }
 
         li {
           font-size: 24px;
@@ -382,12 +436,20 @@ body {
             font-size: 20px;
           }
 
+          @media (max-width:991px) {
+            font-size: 14px;
+          }
+
           &:not(:last-child) {
             &:after {
               content: "/";
               position: relative;
               margin: 0 10px;
               color: #A5A5A5;
+
+              @media (max-width:767px) {
+                margin: 0 2px;
+              }
             }
           }
 
@@ -403,6 +465,10 @@ body {
   .contentArearfid {
     padding-top: 60px;
 
+    @media (max-width:767px) {
+      padding-top: 45px;
+    }
+
     .container.areaSide {
       position: absolute;
       top: 0;
@@ -411,6 +477,10 @@ body {
       left: 0;
       right: 0;
       height: 100%;
+
+      @media (max-width:767px) {
+        display: none;
+      }
     }
 
     .areaContentData {
@@ -427,6 +497,12 @@ body {
         top: 0;
         height: 100%;
         z-index: 2;
+
+        @media (max-width:1199px) {
+          width: 215px;
+          left: 15px;
+        }
+
 
         ul {
           list-style-type: none;
@@ -492,7 +568,7 @@ body {
             h3 {
               padding: 15px 10px 20px;
               color: #FFF;
-              font-size: 24px;
+              font-size: 20px;
               display: table;
               margin: 0;
             }
@@ -515,14 +591,27 @@ body {
       .pleft {
         padding-left: 315px;
         position: relative;
+
+        @media (max-width:1199px) {
+          padding-left: 250px;
+        }
+
+        @media (max-width:767px) {
+          padding-left: 15px;
+        }
       }
 
       h2 {
-        font-size: 34px;
-        line-height: 40px;
+        font-size: 40px;
+        line-height: 45px;
         font-weight: 500;
         font-family: $Jaldi;
         margin: 0 0 15px;
+
+        @media (max-width:1199px) {
+          font-size: 34px;
+          line-height: 45px;
+        }
       }
 
       p {
@@ -532,16 +621,20 @@ body {
         font-family: $kantumruyProFont;
       }
 
+      #capabilityData {
+        padding-bottom: 50px;
+      }
+
       .boxcapabilitys {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
         flex-wrap: wrap;
         list-style-type: none;
         align-items: stretch;
         padding: 0;
         position: relative;
         z-index: 7;
+        margin: 0;
 
         .boxcapability {
           max-width: calc(100%/3 - 15px);
@@ -552,6 +645,18 @@ body {
           border-radius: 10px;
           transition: all 0.5s;
 
+          @media (max-width:1365px) {
+            padding: 15px;
+          }
+
+          @media (max-width:1199px) {
+            max-width: calc(50% - 15px);
+          }
+
+          @media (max-width:767px) {
+            max-width: 100%;
+          }
+
           h5 {
             font-size: 20px;
             font-weight: 500;
@@ -559,12 +664,21 @@ body {
             color: #D9632D;
             margin: 0 0 15px;
             padding-right: 0px;
+
+            @media (max-width:1365px) {
+              font-size: 18px;
+            }
+
+            @media (max-width:1199px) {
+              font-size: 16px;
+            }
           }
 
           p {
             margin: 0;
             font-size: 16px;
             font-family: $kantumruyProFont;
+            margin: 0;
           }
 
           &:hover {
@@ -579,8 +693,12 @@ body {
 
     .processData {
       background: #F0F0F0;
-      padding: 100px 0 100px;
+      padding: 70px 0;
       position: relative;
+
+      @media (max-width:767px) {
+        padding: 45px 0;
+      }
 
       .container {
         text-align: right;
@@ -592,7 +710,13 @@ body {
       }
 
       p {
-        margin-bottom: 70px;
+        margin-bottom: 45px;
+
+        @media (max-width:767px) {
+          &:empty {
+            display: none;
+          }
+        }
       }
 
       .boxcapabilitys {
@@ -602,10 +726,18 @@ body {
           .slick-list {
             margin: 0 -30px;
 
+            @media (max-width:1365px) {
+              margin: 0 -10px;
+            }
+
             .slick-slide {
               margin: 0 30px;
               min-height: 200px;
               text-align: left;
+
+              @media (max-width:1365px) {
+                margin: 0 10px;
+              }
 
               h5 {
                 padding: 0;
@@ -623,7 +755,7 @@ body {
         border: 1px solid #AFAFAF;
         width: 50px;
         height: 50px;
-        margin-top: 60px;
+        margin-top: 40px;
         margin-left: auto;
         margin-right: 0;
         display: inline-flex;
@@ -661,8 +793,12 @@ body {
         text-align: left;
       }
 
-      p {
+      h2+p {
         margin-bottom: 60px;
+
+        @media (max-width:1199px) {
+          margin-bottom: 30px;
+        }
       }
 
       .boxcapabilitys {
@@ -711,6 +847,10 @@ body {
         z-index: 6;
         position: relative;
 
+        @media (max-width:767px) {
+          margin-top: 25px;
+        }
+
         &.left {
           margin-right: 15px;
           background: url(assets/prev-white-arrow.svg) center center no-repeat #D9632D;
@@ -724,7 +864,7 @@ body {
     }
 
     #why-dham {
-      padding: 30px 0;
+      padding: 30px 0 0;
 
       .boxcapabilitys {
         .boxcapability {
@@ -735,9 +875,24 @@ body {
           margin: 0;
           border-radius: 0;
 
+          @media (max-width:767px) {
+            max-width: 100%;
+          }
+
+          &:first-child {
+            @media (max-width:767px) {
+              border-bottom: 0px solid #D9632D;
+            }
+          }
+
           &:nth-child(2) {
             border-left: 0;
             border-right: 0;
+
+            @media (max-width:767px) {
+              border: 1px solid #D9632D;
+              border-bottom: 0;
+            }
 
           }
 
@@ -750,6 +905,11 @@ body {
             border-left: 0;
             border-right: 0;
             border-top: 0px;
+
+            @media (max-width:767px) {
+              border: 1px solid #D9632D;
+              border-top: 0;
+            }
           }
 
           &:last-child {
@@ -770,6 +930,12 @@ body {
       display: flex;
       align-items: stretch;
 
+      @media (max-width:767px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0 !important;
+      }
+
       .part-help {
         width: 50%;
         color: #FFF;
@@ -782,9 +948,26 @@ body {
           align-items: flex-end;
           flex: 0 0 50%;
 
+          @media (max-width:1365px) {
+            flex: 0 0 60%;
+          }
+
+          @media (max-width:767px) {
+            flex: 0 0 100%;
+            width: 100%;
+          }
+
           .dataDescription {
             background: rgba(0, 0, 0, 0.5);
             padding: 45px 25px;
+
+            @media (max-width:1365px) {
+              padding: 20px;
+            }
+
+            @media (max-width:767px) {
+              padding: 90px 15px 15px;
+            }
 
             ul {
               list-style-type: none;
@@ -821,6 +1004,17 @@ body {
         &:first-child {
           padding: 85px 90px;
 
+          @media (max-width:1365px) {
+            padding: 45px 15px;
+            max-width: 40%;
+          }
+
+          @media (max-width:767px) {
+            padding: 45px 15px 15px;
+            max-width: 100%;
+            width: 100%;
+          }
+
           h2 {
             font-size: 40px;
             font-family: $Jaldi;
@@ -828,6 +1022,11 @@ body {
 
             @media (max-width:1499px) {
               margin: 0 0 50px;
+            }
+
+            @media (max-width:1365px) {
+              margin: 0 0 30px;
+              font-size: 30px;
             }
           }
 
@@ -842,6 +1041,15 @@ body {
               width: 48%;
               margin-bottom: 30px;
 
+              @media (max-width:1199px) {
+                width: 100%;
+                margin-bottom: 10px;
+              }
+
+              @media (max-width:767px) {
+                width: 48%;
+                margin-bottom: 10px;
+              }
 
               button {
                 background: none;
@@ -867,6 +1075,11 @@ body {
                   font-size: 18px;
                 }
 
+                @media (max-width:1199px) {
+                  font-size: 16px;
+                  text-align: center;
+                }
+
                 &:hover {
                   background: #D9632D;
                 }
@@ -879,14 +1092,29 @@ body {
 
     #partners-section {
       background: #D9D9D9;
-      padding: 80px 0;
+      padding: 70px 0;
 
       h2 {
-        font-size: 48px;
+        font-size: 40px;
         line-height: 55px;
         font-weight: 300;
         font-family: $Montserrat;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+
+        @media (max-width:1439px) {
+          font-size: 38px;
+        }
+
+        @media (max-width:1365px) {
+          font-size: 38px;
+        }
+
+        @media (max-width:767px) {
+
+          font-size: 26px;
+          line-height: 35px;
+
+        }
       }
 
       p {
@@ -894,6 +1122,11 @@ body {
         font-weight: 400;
         font-family: $Montserrat;
         line-height: 38px;
+
+        @media (max-width:767px) {
+          font-size: 18px;
+          line-height: 28px;
+        }
       }
 
       .btnBottom {
@@ -910,6 +1143,10 @@ body {
         z-index: 7;
         position: relative;
 
+        @media (max-width:767px) {
+          font-size: 16px;
+        }
+
         img {
           margin-left: 45px;
           line-height: 1;
@@ -923,7 +1160,7 @@ body {
     }
 
     #relatedSection {
-      padding: 100px 0;
+      padding: 70px 0;
 
       h3 {
         font-size: 40px;
@@ -931,6 +1168,11 @@ body {
         font-family: $Montserrat;
         font-weight: 500;
         margin: 0 0 20px;
+
+        @media (max-width:1199px) {
+          font-size: 34px;
+          line-height: 45px;
+        }
       }
 
       ul {
@@ -946,23 +1188,53 @@ body {
           display: flex;
           align-items: center;
 
+          @media (max-width:767px) {
+            flex-direction: column;
+          }
+
+          @media (max-width:767px) {
+            &:first-child {
+              padding-top: 0;
+            }
+          }
+
           h5 {
             font-family: $Montserrat;
-            font-size: 20px;
+            font-size: 16px;
             color: #D9632D;
             min-width: 200px;
             margin: 0 60px 0 0;
             font-weight: 500;
             flex: 0 0 200px;
+
+            @media (max-width:991px) {
+              margin: 0 25px 0 0;
+              flex: 0 0 150px;
+              min-width: 150px;
+            }
+
+            @media (max-width:767px) {
+              margin: 0 0 15px;
+              flex: 0 0 auto;
+              min-width: 100%;
+            }
           }
 
           p {
             font-family: $Montserrat;
-            font-size: 20px;
+            font-size: 16px;
             color: #000;
             margin: 0;
-            font-weight: 600;
+            font-weight: 500;
             flex: 0 0 calc(100% - 260px);
+
+            @media (max-width:991px) {
+              flex: 0 0 calc(100% - 175px);
+            }
+
+            @media (max-width:767px) {
+              flex: 0 0 auto;
+            }
           }
         }
       }
@@ -980,9 +1252,18 @@ body {
           .slick-list {
             margin: 0 -30px;
 
+            @media (max-width:1365px) {
+              margin: 0 -10px;
+            }
+
             .slick-slide {
               margin: 0 30px;
               min-height: 200px;
+
+              @media (max-width:1365px) {
+                margin: 0 10px;
+                min-height: 180px;
+              }
 
               &.boxcapability {
                 border: 1px solid #D9632D;
@@ -992,6 +1273,7 @@ body {
                 align-items: center;
                 flex-direction: column;
                 justify-content: center;
+                margin-bottom: 2px;
 
                 h5 {
                   margin: 20px 0 0;

@@ -1,0 +1,49 @@
+.contentArearfid {
+    #benfits-rfid {
+        .boxcapabilitys {
+            .slick-slider {
+                .slide {
+                    h5 {
+                        min-height: 48px;
+
+                        @media (max-width:767px) {
+                            min-height: 5px;
+                        }
+                    }
+
+                    p {
+                        min-height: 290px;
+
+                        @media (max-width:767px) {
+                            min-height: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #process {
+        .boxcapabilitys {
+            .slick-slider {
+                .slide {
+                    h5 {
+                        min-height: 48px;
+
+                        @media (max-width:767px) {
+                            min-height: 5px;
+                        }
+                    }
+
+                    p {
+                        min-height: 200px;
+
+                        @media (max-width:767px) {
+                            min-height: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

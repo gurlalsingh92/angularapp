@@ -11,14 +11,14 @@
                             <a>Solutions</a>
                         </li>
                         <li>
-                            Physical Access Control
+                            Artificial Intelligence
                         </li>
                     </ul>
                 </div>
-                <h1>Secure Spaces, Simplified Access</h1>
-                <p>Enhance your facility's security with tailored physical access control solutions. Manage and monitor
-                    access with ease
-                    while safeguarding your people and assets.</p>
+                <h1>Empowering the Future with Artificial Intelligence</h1>
+                <p>Discover innovative AI solutions designed to transform industries, streamline operations, and drive
+                    smarter
+                    decisions. Harness the power of intelligent systems to unlock your business's true potential.</p>
             </div>
         </div>
         <button class="rac"><span>Request a Consultation</span> <svg width="41" height="16" viewBox="0 0 41 16"
@@ -60,18 +60,7 @@
                         <p>{{ overview.description }}</p>
                     </div>
                 </div>
-                <div id="capabilityData">
-                    <div class="container pleft">
-                        <h2>{{ capability.title }}</h2>
-                        <p>{{ capability.description }}</p>
-                        <ul class="boxcapabilitys">
-                            <li class="boxcapability" *ngFor="let capability of capability.capabilities">
-                                <h5>{{ capability.title }}:</h5>
-                                <p>{{ capability.description }}</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
 
                 <div class="processData" id="process">
                     <div class="container pleft">
@@ -120,35 +109,7 @@
                     </div>
                 </div>
 
-                <div id="why-dham">
-                    <div class="container pleft">
-                        <h2>{{ groups.title }}</h2>
-                        <p>{{ groups.description }}</p>
-                        <ul class="boxcapabilitys">
-                            <li class="boxcapability" *ngFor="let group of groups.groupsArray">
-                                <h5>{{ group.title }}</h5>
-                                <p>{{ group.description }}</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-
-                <div id="network-partners">
-                    <div class="container pleft">
-                        <div class="boxcapabilitys">
-                            <ngx-slick-carousel #benfitsModal="slick-carousel" class="carousel"
-                                [config]="slideConfignew" style="width: 100%;">
-
-                                <div ngxSlickItem class="slide boxcapability"
-                                    *ngFor="let partnernetwork of partnernetwork">
-                                    <img [src]="partnernetwork.image" alt="Network Partners Logo" />
-                                    <h5>{{partnernetwork.title}}</h5>
-                                </div>
-                            </ngx-slick-carousel>
-                        </div>
-                    </div>
-                </div>
 
 
 

@@ -9,6 +9,7 @@ import { CloudServicesComponent } from './cloud-services/cloud-services.componen
 import { InternetOfThingsComponent } from './internet-of-things/internet-of-things.component';
 import { Component } from '@angular/core';
 import { SmallBusinessComponent } from './small-business/small-business.component';
+import { AiComponent } from './ai/ai.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },  // Default route
@@ -19,5 +20,6 @@ export const routes: Routes = [
     { path: 'app-physical-access-control', component: PhysicalAccessControlComponent },
     { path: 'app-cloud-services', component: CloudServicesComponent },
     { path: 'app-internet-of-things', component: InternetOfThingsComponent },
-    { path: 'app-small-business', component: SmallBusinessComponent }
+    { path: 'app-small-business', component: SmallBusinessComponent },
+    { path: 'AiComponent', component: AiComponent }
 ];

@@ -2,4 +2,32 @@
     #network-partners {
         padding-bottom: 100px;
     }
+
+    #why-dham {
+        .boxcapabilitys {
+            .boxcapability {
+                &:last-child {
+                    @media (max-width:767px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #benfits-rfid {
+        .boxcapabilitys {
+            .boxcapability {
+                min-height: inherit;
+
+                h5 {
+                    min-height: 48px;
+                }
+
+                p {
+                    min-height: 140px;
+                }
+            }
+        }
+    }
 }

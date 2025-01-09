@@ -29,6 +29,10 @@ header {
         .mainlogo {
             margin-right: 80px;
 
+            @media (max-width:991px) {
+                margin-right: 30px;
+            }
+
             img {
                 max-width: 130px;
                 line-height: 1;
