@@ -2,11 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-rfid',
   standalone: true,
-  imports: [CommonModule, SlickCarouselModule],
+  imports: [CommonModule, SlickCarouselModule, RouterLink],
   schemas: [NO_ERRORS_SCHEMA],
   templateUrl: './rfid.component.html',
   styleUrl: './rfid.component.scss',
