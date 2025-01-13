@@ -1,0 +1,76 @@
+.aboutBanner {
+    .DataTextMain {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .dataTextImage {
+            flex: 0 0 50%;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 35px 50px 35px 0px;
+
+            .breadcrumb {
+                display: flex;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    position: relative;
+
+                    &:not(:last-child):after {
+                        content: "/";
+                        position: relative;
+                        display: inline-block;
+                        margin: 0 5px;
+                    }
+
+                    a {
+                        color: #000;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #FF5000;
+                        }
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 40px;
+                margin-top: 10px;
+            }
+
+            p {
+                font-size: 24px;
+                line-height: 35px;
+            }
+        }
+
+        .imageRightData {
+            position: relative;
+
+            .titltText {
+                writing-mode: sideways-lr;
+                position: absolute;
+                z-index: 1;
+                bottom: 40px;
+                right: 25px;
+                font-size: 64px;
+                color: #FF5000;
+
+                &:after {
+                    width: 2px;
+                    content: "";
+                    height: 250px;
+                    background: #FF5000;
+                    position: absolute;
+                    left: calc(100% - 20px);
+                    top: -270px;
+                }
+            }
+        }
+    }
+}

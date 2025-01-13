@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RfidComponent } from './rfid/rfid.component';
@@ -7,10 +8,10 @@ import { AppReEngineeringServicesComponent } from './app-re-engineering-services
 import { PhysicalAccessControlComponent } from './physical-access-control/physical-access-control.component';
 import { CloudServicesComponent } from './cloud-services/cloud-services.component';
 import { InternetOfThingsComponent } from './internet-of-things/internet-of-things.component';
-import { Component } from '@angular/core';
 import { SmallBusinessComponent } from './small-business/small-business.component';
 import { AiComponent } from './ai/ai.component';
 import { SalesFormComponent } from './sales-form/sales-form.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },  // Default route
     { path: 'rfid', component: RfidComponent },
@@ -22,5 +23,6 @@ export const routes: Routes = [
     { path: 'app-internet-of-things', component: InternetOfThingsComponent },
     { path: 'app-small-business', component: SmallBusinessComponent },
     { path: 'AiComponent', component: AiComponent },
-    { path: 'app-sales-form', component: SalesFormComponent }
+    { path: 'app-sales-form', component: SalesFormComponent },
+    { path: 'app-about-us', component: AboutUsComponent },
 ];
