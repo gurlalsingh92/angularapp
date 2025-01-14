@@ -17,8 +17,16 @@
             display: flex;
             align-items: flex-start;
 
+            @media (max-width:767px) {
+                flex-direction: column;
+            }
+
             .title-side {
                 flex: 0 0 280px;
+
+                @media (max-width:767px) {
+                    flex: 0 0 auto;
+                }
             }
 
             .containContentData {
@@ -27,6 +35,11 @@
                     font-size: 24px;
                     line-height: 33px;
                     margin: 10px 0 55px;
+
+                    @media (max-width:991px) {
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
                 }
 
                 .boxcapabilitys {
@@ -39,6 +52,17 @@
                         border-radius: 0;
                         margin: 0 0 70px;
 
+                        @media (max-width:991px) {
+                            padding: 20px;
+                        }
+
+                        @media (max-width:767px) {
+                            border-right: 0px solid #D9632D;
+                            border-bottom: 1px solid #D9632D;
+                            padding: 20px 0;
+                            margin: 0 0 20px;
+                        }
+
                         h5 {
                             text-align: left;
                             color: #000;
@@ -49,6 +73,10 @@
                         p {
                             font-size: 20px;
                             margin: 0 0 20px;
+
+                            @media (max-width:991px) {
+                                font-size: 15px;
+                            }
                         }
 
                         .circleDot {
@@ -131,12 +159,21 @@
             display: flex;
             gap: 10px;
 
+            @media (max-width:767px) {
+                flex-direction: column;
+            }
+
             li {
                 max-width: calc(100%/3 - 10px);
                 border: 1px solid #D9632D;
                 border-radius: 10px;
                 background: none;
                 padding: 0;
+
+                @media (max-width:767px) {
+                    max-width: 100%;
+                    width: 100%;
+                }
 
                 h5 {
                     background: url(../../assets/blackbuilding.png) center center no-repeat;
@@ -147,12 +184,24 @@
                     min-height: 200px;
                     display: flex;
                     align-items: flex-end;
+
+                    @media (max-width:991px) {
+                        padding: 0 15px 25px;
+                        font-size: 20px;
+                    }
                 }
 
                 p {
                     padding: 35px 25px;
                     font-size: 18px;
                     font-weight: 600;
+
+                    @media (max-width:991px) {
+                        font-size: 15px;
+                        line-height: 21px;
+                        padding: 25px;
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
@@ -165,9 +214,32 @@
             display: flex;
             align-items: center;
 
+            @media (max-width:767px) {
+                flex-direction: column;
+            }
+
             img {
                 max-width: 500px;
                 margin-right: 65px;
+
+                @media (max-width:991px) {
+                    max-width: 300px;
+                    margin-right: 25px;
+                }
+
+                @media (max-width:767px) {
+                    max-width: 100%;
+                    margin-right: 0px;
+                    margin-bottom: 25px;
+                }
+            }
+
+            p {
+                @media (max-width:991px) {
+                    font-size: 18px;
+                    line-height: 27px;
+
+                }
             }
 
             .btnBottom {
@@ -188,16 +260,31 @@
         .flexDataArea {
             background: rgba(217, 99, 45, 0.2);
             display: flex;
+
+            @media (max-width:991px) {
+                flex-direction: column;
+            }
         }
 
         .flexDataArea img {
             max-width: 400px;
             margin-right: 50px;
             object-fit: cover;
+
+            @media (max-width:991px) {
+                max-width: 100%;
+                width: 100%;
+                margin-right: 0px;
+            }
         }
 
         .flexDataArea .dataMain {
             padding: 25px 25px 25px 0;
+
+            @media (max-width:991px) {
+                padding: 25px;
+
+            }
         }
     }
 
