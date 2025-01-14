@@ -1,10 +1,204 @@
-#capabilityData.processData {
-    .boxcapabilitys {
-        .slide {
-            p {
-                min-height: 140px;
+.contentArearfid {
+    #capabilityData.processData {
+        .boxcapabilitys {
+            .slide {
+                p {
+                    min-height: 140px;
+
+                }
+            }
+        }
+    }
+
+    .approachData {
+        background: #FFF;
+
+        .DataStructureMain {
+            display: flex;
+            align-items: flex-start;
+
+            .title-side {
+                flex: 0 0 280px;
+            }
+
+            .containContentData {
+
+                p {
+                    font-size: 24px;
+                    line-height: 33px;
+                    margin: 10px 0 55px;
+                }
+
+                .boxcapabilitys {
+                    justify-content: flex-start;
+
+                    .slide {
+                        border: 0px;
+                        padding: 25px 40px;
+                        border-right: 1px solid #D9632D;
+                        border-radius: 0;
+                        margin: 0 0 70px;
+
+                        h5 {
+                            text-align: left;
+                            color: #000;
+                            margin-bottom: 30px;
+                            min-height: 48px;
+                        }
+
+                        p {
+                            font-size: 20px;
+                            margin: 0 0 20px;
+                        }
+
+                        .circleDot {
+                            width: 40px;
+                            height: 40px;
+                            border: 1px solid #D9632D;
+                            border-radius: 50%;
+                            display: table;
+                            margin: 0 0 0 auto;
+                            position: relative;
+
+                            &:after {
+                                width: 10px;
+                                height: 10px;
+                                background-color: #000;
+                                position: absolute;
+                                content: "";
+                                top: -5px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                border-radius: 50%;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            .circleDot {
+                                &:after {
+                                    top: 8px;
+                                    transform: translateX(0%);
+                                    left: auto;
+                                    right: -3.5px;
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            .circleDot {
+                                &:after {
+                                    top: 25px;
+                                    transform: translateX(0%);
+                                    left: auto;
+                                    right: -2px;
+                                }
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            .circleDot {
+                                &:after {
+                                    top: 25px;
+                                    transform: translateX(0%);
+                                    left: -3px;
+                                    right: auto;
+                                }
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            .circleDot {
+                                &:after {
+                                    top: 2px;
+                                    transform: translateX(0%);
+                                    left: -0.5px;
+                                    right: auto;
+                                }
+                            }
+                        }
+                    }
+                }
 
             }
         }
     }
+
+    #why-dham.whydhamgroup {
+        background: #F7F7F7;
+        padding: 60px 0;
+
+        ul.boxcapabilitys {
+            display: flex;
+            gap: 10px;
+
+            li {
+                max-width: calc(100%/3 - 10px);
+                border: 1px solid #D9632D;
+                border-radius: 10px;
+                background: none;
+                padding: 0;
+
+                h5 {
+                    background: url(../../assets/blackbuilding.png) center center no-repeat;
+                    font-size: 22px;
+                    color: #FFF;
+                    border-radius: 10px;
+                    padding: 0 60px 25px;
+                    min-height: 200px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+
+                p {
+                    padding: 35px 25px;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    #partners-section {
+        background-color: rgba(217, 99, 45, 0.2);
+
+        .flexArea {
+            display: flex;
+            align-items: center;
+
+            img {
+                max-width: 500px;
+                margin-right: 65px;
+            }
+
+            .btnBottom {
+                margin: 40px 0 0 auto;
+                display: table;
+
+                img {
+                    margin: 0 0 0 20px;
+                }
+            }
+        }
+    }
+
+    #dcgoverview {
+        margin-top: 70px;
+        margin-bottom: 100px;
+
+        .flexDataArea {
+            background: rgba(217, 99, 45, 0.2);
+            display: flex;
+        }
+
+        .flexDataArea img {
+            max-width: 400px;
+            margin-right: 50px;
+            object-fit: cover;
+        }
+
+        .flexDataArea .dataMain {
+            padding: 25px 25px 25px 0;
+        }
+    }
+
 }

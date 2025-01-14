@@ -3,25 +3,23 @@ import { CommonModule } from '@angular/common';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { RouterLink } from '@angular/router';
-
+import { WorkingAtDcgComponent } from '../homesections/working-at-dcg/working-at-dcg.component';
 @Component({
   selector: 'app-about-scroll',
   standalone: true,
-  imports: [CommonModule, SlickCarouselModule, RouterLink],
+  imports: [CommonModule, SlickCarouselModule, RouterLink, WorkingAtDcgComponent],
   templateUrl: './about-scroll.component.html',
   styleUrl: './about-scroll.component.scss'
 })
 export class AboutScrollComponent implements AfterViewInit {
   sections = [
-    { id: 'overviewData', name: 'Overview' },
-    { id: 'capabilityData', name: 'Our Capabilities' },
-    { id: 'process', name: 'Our Process' },
-    { id: 'benfits-rfid', name: 'Benefits' },
+    { id: 'overviewData', name: 'Mission' },
+    { id: 'dcgoverview', name: 'Overview' },
+    { id: 'capabilityData', name: 'Core Values' },
+    { id: 'process', name: 'Our Approach' },
     { id: 'why-dham', name: 'Why Us' },
-    { id: 'how-rfid-help', name: 'Use Cases' },
-    { id: 'network-partners', name: 'Partners' },
-    { id: 'relatedSection', name: 'Related Solutions' },
     { id: 'partners-section', name: 'Next Steps' },
+    { id: 'wdcg', name: 'Careers' },
   ];
 
   activeSection: string = ''; // Tracks the currently active section's ID
@@ -162,6 +160,8 @@ export class AboutScrollComponent implements AfterViewInit {
       { title: "02 Customer-Centricity", description: "Your success is our priority; we tailor every solution to meet your unique needs." },
       { title: "03 Integrity", description: "We build trust through honesty, transparency, and a commitment to delivering on our promises." },
       { title: "04 Inclusion and Diversity", description: "We foster an inclusive and diverse work environment where every voice is valued, and diverse perspectives drive innovation and success." },
+      { title: "05 Excellence", description: "We strive for quality and precision in every project, ensuring exceptional results every time." },
+      { title: "06 Collaboration", description: "We believe in the power of teamwork, working closely with clients and partners to achieve shared success and innovative solutions." },
     ]
   };
 
@@ -197,14 +197,14 @@ export class AboutScrollComponent implements AfterViewInit {
 
   groups = {
     title: "Why Dham Consulting Group",
-    description: "RFID technology provides real-time visibility, accuracy, and efficiency in asset and inventory management. By automating processes and reducing errors, RFID enables better decision-making, cost savings, and the ability to identify bottlenecks, ultimately optimizing operations and improving productivity.",
+    description: "",
     groupsArray: [
-      { title: "Improved Accuracy", description: "RFID reduces human errors, enabling precise asset and inventory tracking for reliable data." },
-      { title: "Real-Time Tracking", description: "RFID delivers real-time asset visibility, enhancing decision-making and enabling prompt actions with current data." },
-      { title: "Enhanced Efficiency", description: "Automated tracking streamlines operations, reducing manual effort and saving time on inventory and reporting tasks." },
-      { title: "Cost Savings", description: "RFID reduces labor and operational costs by automating inventory checks, minimizing loss, and optimizing supply chain processes." },
-      { title: "Better Decision-Making", description: "Accurate, real-time RFID data helps managers make informed decisions on resources, inventory, and operations." },
-      { title: "Identifying Bottlenecks", description: "RFID pinpoints inefficiencies in supply chains and operations, identifying delays and underused resources." }
+      { title: "Expertise Across Industries", description: "Our team brings decades of experience across diverse industries, ensuring solutions that meet specific business needs." },
+      { title: "Client-Centric Approach", description: "We prioritize your goals, delivering tailored strategies that drive measurable outcomes." },
+      { title: "Innovative Solutions", description: "Leveraging the latest technologies, we deliver forward-thinking solutions for complex challenges." },
+      { title: "End-to-End Services", description: "From strategy and development to deployment and support, we provide comprehensive solutions." },
+      { title: "Scalable and Cost-Effective Solutions", description: "Whether you're a startup or an enterprise, we design solutions that grow with you, optimizing costs." },
+      { title: "Commitment to Excellence", description: "Our mission is to exceed expectations, ensuring long-term success for our clients." }
     ]
   };
 
@@ -214,19 +214,7 @@ export class AboutScrollComponent implements AfterViewInit {
     description: "Helps description goes here."
   };
 
-  help2 = {
-    tabArray: ['Manufacturing', 'Healthcare', 'Construction', 'Education', 'Oil & Gas', 'Government', 'Logistics', 'Retail'],
-    helps: [
-      { title: 'Manufacturing', description: 'RFID streamlines production workflows, tracks raw materials and finished goods, and ensures quality control by providing real-time data on equipment and asset statuses, reducing downtime and enhancing operational efficiency.' },
-      { title: 'Healthcare', description: 'RFID improves patient safety by tracking medical equipment, supplies, and medications in real-time. It ensures accurate patient identification and reduces errors while streamlining inventory management in hospitals and clinics.' },
-      { title: 'Construction', description: 'RFID in construction ensures efficient tracking of tools, materials, and workers on-site, improving equipment utilization and reducing theft. It enhances project management by offering real-time data for materials and workforce productivity.' },
-      { title: 'Education', description: 'RFID can streamline library systems by tracking books, enhance campus security through access control, and manage student attendance, ensuring real-time monitoring of assets and improving campus safety.' },
-      { title: 'Oil & Gas', description: 'RFID helps in managing assets like pipelines, rigs, and drilling equipment, ensuring safety compliance and streamlining maintenance schedules. It also tracks inventory and parts, reducing loss and downtime in high-demand environments.' },
-      { title: 'Government', description: 'RFID is used for asset tracking, security monitoring, and managing government inventories like vehicles, equipment, and public records. It supports regulatory compliance by ensuring up-to-date and accurate asset tracking.' },
-      { title: 'Logistics', description: 'In logistics, RFID improves tracking and visibility across the supply chain. It automates inventory checks, reduces human error, and speeds up shipments, improving overall operational efficiency and customer satisfaction.' },
-      { title: 'Retail', description: 'RFID enhances inventory accuracy, reduces stockouts, and enables better customer experiences by streamlining product tracking, from warehouse to store shelves. It also supports efficient checkout systems and loss prevention strategies.' },
-    ],
-  };
+
   selectedTab = 0;
 
   selectTab(index: number): void {
@@ -235,65 +223,13 @@ export class AboutScrollComponent implements AfterViewInit {
 
 
   partners = {
-    title: "Partner with our specialists for strategic planning.",
-    description: "Begin with a strategy session to uncover ways technology can drive solutions, streamline processes, and unlock new opportunities.",
-    button: "Reach out to us today",
+    image: "assets/craft.jpg",
+    description: "We’re here to help you take the next step in your technology journey. Contact us today to discuss your needs and discover how Dham Consulting Group can create innovative solutions tailored to your goals.",
+    button: "Contact Us",
   };
 
-  partnernetwork = [
-    {
-      image: "assets/Logos/Impinj.png",
-      title: "Impinj"
-    },
-    {
-      image: "assets/Logos/alien.png",
-      title: "Alien",
-    },
-    {
-      image: "assets/Logos/Chinway-Logo.png",
-      title: "Chain way",
-    },
-    {
-      image: "assets/Logos/HID.png",
-      title: "HID",
-    },
-    {
-      image: "assets/Logos/Smartrac_logo.png",
-      title: "Smartrac",
-    },
-
-    {
-      image: "assets/Logos/sato_logo.png",
-      title: "Sato",
-    },
-    {
-      image: "assets/Logos/times-7.png",
-      title: "Times-7",
-    },
-    {
-      image: "assets/Logos/honeywell.png",
-      title: "Honeywell",
-    },
-    {
-      image: "assets/Logos/Smartrac_logo.png",
-      title: "Avery Dennison",
-    },
 
 
-
-
-
-
-  ];
-
-  relatedSolutions = [
-    { title: "Application Management Services", description: "RFID solutions require ongoing management to ensure smooth performance, from system updates to monitoring, making application management a key service." },
-    { title: "Artificial Intelligence (AI)", description: "AI can optimize RFID data analysis, enabling predictive maintenance, smarter inventory management, and real-time decision-making based on RFID data." },
-
-    { title: "Cloud Computing Services", description: "Cloud computing enhances RFID by enabling remote data access and scalable storage for RFID system data, supporting real-time tracking and analytics." },
-    { title: "Application Development Services", description: "Custom applications tailored to integrate RFID technology, providing seamless operation and improved user experience across industries like logistics, retail, and healthcare." },
-    { title: "Internet of Things (IoT)", description: "RFID is a critical component of IoT, as it connects physical objects to the digital world, enabling smart automation, asset tracking, and real-time monitoring." },
-  ];
 
   ngOnInit(): void { }
 }

@@ -52,6 +52,10 @@
         .imageRightData {
             position: relative;
 
+            img {
+                max-width: 100%;
+            }
+
             .titltText {
                 writing-mode: sideways-lr;
                 position: absolute;
@@ -64,11 +68,11 @@
                 &:after {
                     width: 2px;
                     content: "";
-                    height: 250px;
+                    height: 20vh;
                     background: #FF5000;
                     position: absolute;
                     left: calc(100% - 20px);
-                    top: -270px;
+                    bottom: calc(100% + 25px);
                 }
             }
         }

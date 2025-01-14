@@ -1,5 +1,5 @@
 <div class="rfid-pages-main">
-    
+
 
     <div class="contentArearfid">
 
@@ -7,7 +7,7 @@
 
 
             <!-- Data Overview -->
-            <div class="overview-capabilities">
+            <div class="overview-capabilities corevaluesData">
                 <div class="container areaSide">
                     <aside class="rfid-sidebar">
                         <ul>
@@ -26,43 +26,77 @@
                         <h2>{{ overview.title }}</h2>
                         <p>{{ overview.description }}</p>
                     </div>
+                    <div id="dcgoverview">
+                        <h2>DCG Overview</h2>
+                        <div class="flexDataArea">
+                            <img src="assets/dcg-img.jpg" alt="">
+                            <div class="dataMain">
+                                <p><strong>Dham Consulting Group (DCG)</strong> is more than just a technology
+                                    provider—we're your
+                                    strategic partner in innovation and
+                                    success. Founded on a passion for simplifying complex challenges, we specialize in
+                                    delivering cutting-edge solutions
+                                    tailored to businesses of all sizes. From cloud computing and application
+                                    development to RFID, IoT, and physical access
+                                    control, our expertise spans a wide array of modern technologies. We believe that
+                                    small businesses deserve
+                                    enterprise-level service and support, and we are committed to leveling the playing
+                                    field by offering comprehensive,
+                                    cost-effective solutions.</p>
+
+                                <p>At Dham Consulting Group, we pride ourselves on fostering long-term relationships
+                                    built on trust, innovation, and
+                                    results. Our mission is to empower businesses to embrace digital transformation
+                                    confidently, optimizing their operations
+                                    and unlocking new opportunities. With a focus on creativity, collaboration, and
+                                    excellence, we work tirelessly to ensure
+                                    our clients stay ahead in a rapidly evolving technological landscape. Partner with
+                                    us, and let’s build a smarter, more
+                                    connected future together.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="capabilityData" class="processData">
                     <div class="container">
                         <h2>{{ capability.title }}</h2>
                         <p>{{ capability.description }}</p>
                         <ul class="boxcapabilitys">
-                        <ngx-slick-carousel #slickModal="slick-carousel" style="width: 1080px;" class="carousel" [config]="slideConfigcap">
-                            <div ngxSlickItem class="slide boxcapability" *ngFor="let capability of capability.capabilities">
-                                <h5>{{ capability.title }}</h5>
-                                <p>{{ capability.description }}</p>
-                            </div>
-                        </ngx-slick-carousel>
+                            <ngx-slick-carousel #slickModal="slick-carousel" style="width: 1080px;" class="carousel"
+                                [config]="slideConfigcap">
+                                <div ngxSlickItem class="slide boxcapability"
+                                    *ngFor="let capability of capability.capabilities">
+                                    <h5>{{ capability.title }}</h5>
+                                    <p>{{ capability.description }}</p>
+                                </div>
+                            </ngx-slick-carousel>
                         </ul>
                         <!-- Custom Left Button -->
                         <button class="carousel-btn left" (click)="slickModal.slickPrev()">&#10094;</button>
-                        
+
                         <!-- Custom Right Button -->
                         <button class="carousel-btn right" (click)="slickModal.slickNext()">&#10095;</button>
                     </div>
                 </div>
 
-                <div class="processData" id="process">
+                <div class="processData approachData" id="process">
                     <div class="container">
                         <div class="DataStructureMain">
-                            <aside>
+                            <aside class="title-side">
                                 <h2>{{ solutions.title }}</h2>
                             </aside>
                             <div class="containContentData">
                                 <p>{{ solutions.description }}</p>
                                 <ul class="boxcapabilitys">
-                                
-                                    <li class="slide slide-area-data boxcapability" *ngFor="let solution of solutions.solutionsArray">
-                                        <h5>{{ solution.title }}:</h5>
+
+                                    <li class="slide slide-area-data boxcapability"
+                                        *ngFor="let solution of solutions.solutionsArray">
+                                        <h5>{{ solution.title }}</h5>
                                         <p>{{ solution.description }}</p>
+                                        <div class="circleDot"></div>
                                     </li>
-                                
-                                
+
+
                                 </ul>
                             </div>
                         </div>
@@ -70,31 +104,10 @@
                     </div>
                 </div>
 
-                <div id="benfits-rfid">
-                    <div class="container pleft">
-                        <h2>{{ benefits.title }}</h2>
-                        <p>{{ benefits.description }}</p>
-                        <div class="boxcapabilitys">
-                            <ngx-slick-carousel #benfitsModal="slick-carousel" style="width: 1080px;" class="carousel"
-                                [config]="slideConfig">
 
-                                <div ngxSlickItem class="slide boxcapability"
-                                    *ngFor="let benefit of benefits.benefitsArray">
-                                    <h5>{{ benefit.title }}:</h5>
-                                    <p>{{ benefit.description }}</p>
-                                </div>
-                            </ngx-slick-carousel>
-                        </div>
-                        <!-- Custom Left Button -->
-                        <button class="carousel-btn left" (click)="benfitsModal.slickPrev()">&#10094;</button>
 
-                        <!-- Custom Right Button -->
-                        <button class="carousel-btn right" (click)="benfitsModal.slickNext()">&#10095;</button>
-                    </div>
-                </div>
-
-                <div id="why-dham">
-                    <div class="container pleft">
+                <div id="why-dham" class="whydhamgroup">
+                    <div class="container">
                         <h2>{{ groups.title }}</h2>
                         <p>{{ groups.description }}</p>
                         <ul class="boxcapabilitys">
@@ -106,66 +119,17 @@
                     </div>
                 </div>
 
-                <div id="how-rfid-help" class="how-rfid-help pleft">
-                    <div class="part-help">
-
-                        <h2>{{ help.title }}</h2>
-
-                        <ul class="tabs">
-                            <li *ngFor="let tab of help2.tabArray; let i = index" (click)="selectTab(i)"
-                                [class.active]="selectedTab === i">
-                                <button>{{ tab }}</button>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div class="part-help">
-
-                        <div class="dataDescription">
-                            <ul class="tab-content">
-                                <li *ngFor="let help of help2.helps; let i = index" [hidden]="selectedTab !== i">
-                                    <h2>{{ help.title }}</h2>
-                                    <p>{{ help.description }}</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="network-partners">
-                    <div class="container pleft">
-                        <div class="boxcapabilitys">
-                            <ngx-slick-carousel #benfitsModal="slick-carousel" class="carousel"
-                                [config]="slideConfignew" style="width: 100%;">
-
-                                <div ngxSlickItem class="slide boxcapability"
-                                    *ngFor="let partnernetwork of partnernetwork">
-                                    <img [src]="partnernetwork.image" alt="Network Partners Logo" />
-                                    <h5>{{partnernetwork.title}}</h5>
-                                </div>
-                            </ngx-slick-carousel>
-                        </div>
-                    </div>
-                </div>
-                <div id="relatedSection">
-                    <div class="container pleft">
-                        <h3>Related Solutions</h3>
-                        <ul>
-                            <li *ngFor="let relatedSolution of relatedSolutions">
-                                <h5>{{ relatedSolution.title }}:</h5>
-                                <p>{{ relatedSolution.description }}</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
 
                 <div id="partners-section">
-                    <div class="container pleft">
-                        <h2>{{ partners.title }}</h2>
-                        <p>{{ partners.description }}</p>
-                        <button class="btnBottom">{{ partners.button }} <img src="../../assets/right-arrow-white.svg"
-                                alt=""></button>
+                    <div class="container">
+                        <div class="flexArea">
+                            <img [src]="partners.image" alt="" />
+                            <div class="contentData">
+                                <p>{{ partners.description }}</p>
+                                <button class="btnBottom">{{ partners.button }} <img
+                                        src="../../assets/right-arrow-white.svg" alt=""></button>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -176,3 +140,4 @@
         </div>
     </div>
 </div>
+<app-working-at-dcg></app-working-at-dcg>
