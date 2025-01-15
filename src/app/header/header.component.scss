@@ -102,10 +102,11 @@ header {
                     flex-direction: column;
                     background-color: #FFF;
                     z-index: 2;
-                    padding: 35px 20px 20px;
-                    top: 28px;
+                    padding: 20px 20px 20px;
+                    top: 38px;
                     opacity: 0;
                     visibility: hidden;
+                    border: 1px solid #eee;
 
                     a {
                         margin-bottom: 10px;
