@@ -2,12 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { RouterLink } from '@angular/router';
 import { WorkingAtDcgComponent } from '../homesections/working-at-dcg/working-at-dcg.component';
 @Component({
   selector: 'app-about-scroll',
   standalone: true,
-  imports: [CommonModule, SlickCarouselModule, RouterLink, WorkingAtDcgComponent],
+  imports: [CommonModule, SlickCarouselModule, WorkingAtDcgComponent],
   templateUrl: './about-scroll.component.html',
   styleUrl: './about-scroll.component.scss'
 })
